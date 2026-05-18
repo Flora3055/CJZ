@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 
+<html lang="en" class="ie8 no-js">
+   <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena Fashion</title>
+
+    <!-- Body link start -->
+    <!-- fav icon link -->
+    <link rel="shortcut icon" type="images/png" href="images/Fav-Icon.png">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--owl carousel link -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- magnific pop link -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- video pop link -->
+    <link rel="stylesheet" type="text/css" href="css/grt-youtube-popup.css">
+    <!-- wow animaton link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive link -->
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css//jquery.bxslider.min.css">
+    <!-- Body link  end-->
+</head>
+
+<body>
+    <!-- ++++++++++++++++++++ preloader ++++++++++++++ -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <!-- +++++++++++++++++++++++++++++ comming soon section start +++++++++++++++++++++++  -->
+    <div class="comingSoonSection">
+        <div class="comingSoonMainBox">
+            <div class="comingSonnInnerBoxOne">
+                <div class="comingSoonContent">
+                    <div class="logoImg">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <h2>We’re Building Something New</h2>
+                    <p>We Will Be Back Soon, Stay Tuned!</p>
+                    <div class="comingSoonCountDwon">
+                        <div class="countdown" data-date="2026-12-31T23:59:59">
+                            <ul>
+                                <li><span class="days"></span> Days</li>
+                                <li><span class="hours"></span> Hours</li>
+                                <li><span class="minutes"></span> Minutes</li>
+                                <li><span class="seconds"></span> Seconds</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="btnOne">Get Notification</a>
+                </div>
+            </div>
+            <div class="comingSonnInnerBoxTwo">
+                <div class="comingSoonImgBox">
+                    <img src="images/comingSoonImg.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- +++++++++++++++++++++++++++++ comming soon section end +++++++++++++++++++++++  -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/grt-youtube-popup.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        (function () {
+            const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+
+            function startCountdown(el) {
+                const targetDate = new Date(el.getAttribute("data-date")).getTime();
+
+                const timer = setInterval(() => {
+                    const now = new Date().getTime(),
+                        distance = targetDate - now;
+
+                    if (distance < 0) {
+                        el.innerHTML = "<h2>Time's up!</h2>";
+                        clearInterval(timer);
+                        return;
+                    }
+
+                    el.querySelector(".days").innerText = Math.floor(distance / day);
+                    el.querySelector(".hours").innerText = Math.floor((distance % day) / hour);
+                    el.querySelector(".minutes").innerText = Math.floor((distance % hour) / minute);
+                    el.querySelector(".seconds").innerText = Math.floor((distance % minute) / second);
+                }, 1000);
+            }
+
+            document.querySelectorAll(".countdown").forEach(startCountdown);
+        })();
+
+    </script>
+</body>
+
+</html>
