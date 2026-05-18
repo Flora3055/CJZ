@@ -1,0 +1,179 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Testimonails - 04 Section css
+  02. Responsive css
+
+**********************************************/
+
+.testimonailsFourSec {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-color: var(--sand);
+
+    .testimonialsFourWrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .titleBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonialsFourSlider {
+            position: relative;
+            width: 100%;
+            margin-top: 60px;
+
+            .testimonialCardBox {
+                position: relative;
+                background-color: var(--white);
+                box-shadow: 0px 4px 10px 0px #00000014;
+                padding: var(--p60) var(--p24);
+
+
+                -webkit-transition: 0.3s;
+                -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+                -o-transition: 0.3s;
+                transition: 0.3s;
+                -webkit-transform: scale(0.80);
+                -ms-transform: scale(0.80);
+                transform: scale(0.80);
+
+                .stars {
+                    opacity: 0;
+
+                    ul {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: var(--m20);
+                    }
+                }
+
+                p {
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    text-align: center;
+                    color: var(--text-black);
+                    margin-bottom: var(--m20);
+                }
+
+                .commonHeading {
+                    h6 {
+                        opacity: 0;
+                        margin-top: var(--m10);
+                    }
+                }
+
+                .commaBox {
+                    position: absolute;
+                    right: 20px;
+                    z-index: 99;
+                    bottom: -20px;
+                    opacity: 0;
+                }
+
+
+            }
+
+            .owl-carousel {
+
+                .owl-dots {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: var(--m40);
+                    gap: 10px;
+
+                    .owl-dot {
+                        span {
+                            border: 1px solid #949494;
+                            width: 14px;
+                            height: 14px;
+                            display: flex;
+                            border-radius: 50px;
+
+                        }
+
+                        &.active {
+                            span {
+                                border-color: transparent;
+                                background-color: var(--chocolate);
+                            }
+                        }
+                    }
+                }
+
+                .owl-stage-outer {
+                    .owl-stage {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .item {
+                            transform: translate3d(0, 0, 0);
+                            /* DO NOT REMEMBER WHERE TU PUT THIS, SEARCH FOR 3D ACCELERATION */
+                            // transform: scale(0.9);
+
+                            // transition: all .25s ease-in-out; 
+                            margin: 50px 0;
+                            /* OVERWRITE PLUGIN MARGIN */
+                        }
+
+                        .center {
+                            .testimonialCardBox {
+                                margin-bottom: 20px;
+                                padding: var(--p24);
+
+                                -webkit-transform: scale(1.15);
+                                -ms-transform: scale(1.15);
+                                transform: scale(1.15);
+
+
+
+                                .stars {
+                                    opacity: 1;
+                                }
+
+                                .commonHeading {
+                                    h6 {
+                                        opacity: 1;
+                                        text-align: center;
+                                    }
+                                }
+
+                                .commaBox {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .testimonailsFourSec {
+        padding: 50px 0px;
+    }
+
+    .testimonailsFourSec .testimonialsFourWrapper .testimonialsFourSlider {
+        margin-top: 30px;
+    }
+}

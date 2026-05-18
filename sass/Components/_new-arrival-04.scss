@@ -1,0 +1,321 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. New Arival - 04 Section css
+  02. Responsive css
+
+**********************************************/
+
+.newArivalSliderSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0) var(--p100) var(--p0);
+    background-color: var(--sand);
+
+    .newArivalSliderWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+
+        .titleBox {
+            position: relative;
+        }
+    }
+}
+
+.newArivalSliderBox {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    margin-top: 60px;
+    padding-left: 255px;
+
+    .product-card {
+        width: var(--width100);
+        box-shadow: 0px 4px 20px 0px #00000014;
+        background-color: var(--white);
+        border-radius: var(--br6);
+
+        .offerBox {
+            width: 80px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--sky);
+            color: var(--white);
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            z-index: 1;
+        }
+
+        .img-container {
+            position: relative;
+            text-align: center;
+            padding: var(--p16) var(--p16) var(--p60) var(--p16);
+
+            img {
+                width: 100%;
+                // max-width: 310px;
+                // height: 384px;
+                margin: 0 auto;
+            }
+
+
+
+            .iconListBox {
+                position: absolute;
+                top: 15px;
+                right: -40px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                transition: all 0.5s;
+                overflow: hidden;
+                opacity: 0;
+                z-index: 99999;
+                padding: var(--p10);
+
+                li {
+                    .btn {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0px 4px 12px 0px #00000014;
+                        border: none;
+                        background-color: var(--white);
+                        border-radius: 50px;
+                    }
+                }
+            }
+
+            .addBtn {
+                height: 54px;
+                position: absolute;
+                bottom: -30px;
+                left: 15px;
+                right: 15px;
+                transition: all 0.5s;
+                overflow: hidden;
+                opacity: 0;
+                z-index: 99999;
+
+                a {
+                    width: 100%;
+                }
+            }
+        }
+
+        &:hover {
+            .iconListBox {
+                right: 5px;
+                opacity: 1;
+            }
+
+            .addBtn {
+                bottom: 15px;
+                opacity: 1;
+            }
+        }
+
+        .details {
+            width: var(--width100);
+            padding: var(--p10) var(--p20) var(--p26) var(--p20);
+
+            .rating-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: var(--m6);
+
+                .rating {
+                    a {
+                        font-weight: var(--fw400);
+                        font-size: var(--fs20);
+                        color: var(--text-black);
+                        display: flex;
+                        align-items: center;
+
+                    }
+                }
+            }
+
+            .titleBox {
+                h4 {
+                    margin-bottom: var(--m6);
+                }
+            }
+
+            p {
+                font-weight: var(--fw500);
+                font-size: var(--fs36);
+                color: var(--text-black);
+
+                del {
+                    color: var(--dark01);
+                }
+            }
+
+
+        }
+    }
+
+
+    .owl-nav {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: end;
+        gap: 30px;
+        /* margin-top: 40px; */
+        top: -112px;
+        right: 250px;
+
+        .owl-prev {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--white) !important;
+            border: 1px solid var(--chocolate) !important;
+            transition: all 0.5s;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                background-color: var(--chocolate) !important;
+
+                svg {
+                    path {
+                        fill: var(--white) !important;
+                    }
+                }
+            }
+        }
+
+        .owl-next {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--white) !important;
+            border: 1px solid var(--chocolate) !important;
+            transition: all 0.5s;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                background-color: var(--chocolate) !important;
+
+                svg {
+                    path {
+                        fill: var(--white) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-stage {
+        height: 100%;
+        display: flex;
+
+        .item {
+            height: 100%;
+            display: flex;
+        }
+    }
+}
+
+// responsive css start 
+
+@media(max-width:1799px) {
+    .newArivalSliderBox {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+        margin-top: 60px;
+        padding-left: 215px;
+    }
+}
+
+
+@media(max-width:1499px) {
+    .newArivalSliderBox .owl-nav {
+        right: 60px;
+    }
+}
+
+@media(max-width:1699px) {
+    .newArivalSliderBox {
+        padding-left: 160px;
+
+        .product-card {
+            .details {
+                .titleBox {
+                    h4 {
+                        font-size: var(--fs24);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1599px) {
+    .newArivalSliderBox {
+        padding-left: 115px;
+    }
+}
+
+@media(max-width:1399px) {
+    .newArivalSliderBox {
+        padding-left: 12px;
+    }
+}
+
+@media(max-width:991px) {
+    .newArivalSliderBox .owl-nav {
+        justify-content: center;
+        top: inherit;
+        right: inherit;
+        bottom: -70px;
+    }
+
+    .newArivalSliderBox .owl-nav .owl-prev {
+        width: 35px;
+        height: 35px;
+    }
+
+    .newArivalSliderBox .owl-nav .owl-next {
+        width: 35px;
+        height: 35px;
+    }
+
+    .newArivalSliderSec {
+        padding: var(--p30) var(--p0) var(--p100) var(--p0);
+    }
+
+    .newArivalSliderBox {
+        margin-top: 30px;
+        padding-right: 10px;
+    }
+}

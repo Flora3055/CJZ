@@ -1,0 +1,238 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Commming soon Section css
+  02. Responsive css
+
+**********************************************/
+
+.comingSoonSection {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    background-color: #EFDED0;
+    overflow: hidden;
+
+    .comingSoonMainBox {
+        width: var(--width100);
+        height: 100vh;
+        position: relative;
+        display: flex;
+        gap: 10px;
+        padding-top: 90px;
+
+
+        .comingSonnInnerBoxOne {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .comingSoonContent {
+                margin-left: 150px;
+
+                h2 {
+                    font-family: 'Kalnia';
+                    font-weight: var(--fw600);
+                    font-size: var(--fs48);
+                    color: var(--chocolate);
+                    margin-top: var(--m20);
+                }
+
+                p {
+                    font-family: 'Kalnia';
+                    font-weight: var(--fw500);
+                    font-size: var(--fs26);
+                    color: var(--dark01);
+                    margin-top: var(--m30);
+                }
+
+                .comingSoonCountDwon {
+                    margin: 30px 0px 60px 0px;
+                    position: relative;
+
+                    .countdown {
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            gap: 51px;
+
+                            li {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                font-family: 'lato';
+                                font-weight: var(--fw400);
+                                font-size: var(--fs20);
+                                color: var(--dark01);
+
+                                span {
+                                    font-family: 'Kalnia';
+                                    font-weight: var(--fw500);
+                                    line-height: 80px;
+                                    font-size: 80px;
+                                    color: var(--chocolate);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .comingSonnInnerBoxTwo {
+            width: 50%;
+
+            .comingSoonImgBox {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 800px;
+                    height: 800px;
+                    position: absolute;
+                    background-color: var(--chocolate);
+                    border-radius: 100%;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            img {
+                width: 100%;
+                max-width: 753px;
+                position: relative;
+                z-index: 999;
+
+            }
+        }
+
+    }
+}
+
+// responsive css start 
+
+@media(max-width:1799px) {
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent {
+        margin-left: 100px;
+    }
+}
+
+
+@media(max-width:1699px) {
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo .comingSoonImgBox::after {
+        width: 750px;
+        height: 750px;
+    }
+}
+
+@media(max-width:1599px) {
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo .comingSoonImgBox::after {
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media(max-width:1399px) {
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo .comingSoonImgBox::after {
+        width: 650px;
+        height: 650px;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent {
+        margin-left: 20px;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent h2 {
+        font-size: var(--fs36);
+    }
+}
+
+
+@media(max-width:1199px) {
+    .comingSoonSection .comingSoonMainBox {
+        flex-direction: column;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo .comingSoonImgBox::after {
+        width: 600px;
+        height: 600px;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne {
+        width: 100%;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo {
+        width: 100%;
+    }
+
+    .comingSoonSection .comingSoonMainBox {
+        height: 100%;
+        gap: 50px;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo .comingSoonImgBox {
+        justify-content: center;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo .comingSoonImgBox::after {
+        display: none;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent h2 {
+        text-align: center;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent p {
+        text-align: center;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent .comingSoonCountDwon .countdown ul {
+        gap: 20px;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxTwo img {
+        max-width: 550px;
+    }
+}
+
+@media(max-width:767px) {
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent h2 {
+        font-size: var(--fs28);
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent p {
+        font-size: var(--fs24);
+    }
+
+    .comingSoonSection .comingSoonMainBox {
+        padding-top: 50px;
+    }
+}
+
+@media(max-width:600px) {
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent .comingSoonCountDwon .countdown ul li span {
+        font-size: 32px;
+        line-height: 50px;
+    }
+
+    .comingSoonSection .comingSoonMainBox .comingSonnInnerBoxOne .comingSoonContent .comingSoonCountDwon .countdown ul li {
+        font-size: var(--fs16);
+    }
+}

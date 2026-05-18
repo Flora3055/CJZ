@@ -1,0 +1,193 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Ads Section css
+  02. Responsive css
+
+**********************************************/
+
+.adsSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: 50px 0px 100px 0px;
+
+    .adsSecWrapper {
+        width: var(--width100);
+        position: relative;
+        display: flex;
+        gap: 30px;
+
+        .adsInnerBoxOne {
+            width: var(--width60);
+
+            .imgBoxOne {
+                width: 100%;
+                height: 413px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('../images/home_02/ads-img-01.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                // border-radius: var(--br20);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgb(255 255 255 / 43%);
+                }
+
+                .textBox {
+                    position: absolute;
+
+                    .titleBox {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        z-index: 99;
+
+
+                        h6 {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--text-black);
+                            text-align: center;
+                            margin-bottom: var(--m16);
+                        }
+
+                        h2 {
+                            font-size: var(--fs44);
+                            margin-bottom: var(--m16);
+                        }
+
+                        h4 {
+                            color: var(--chocolate);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .adsInnerBoxTwo {
+            width: var(--width40);
+
+            .imgBoxTwo {
+                width: 100%;
+                height: 413px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('../images/home_02/ads-img-02.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                // border-radius: var(--br20);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgb(255 255 255 / 43%);
+                }
+
+                .textBox {
+                    position: absolute;
+
+                    .titleBox {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        z-index: 99;
+
+
+                        h6 {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                           color: var(--text-black);
+                            text-align: center;
+                            margin-bottom: var(--m16);
+                        }
+
+                        h2 {
+                            font-size: var(--fs44);
+                            margin-bottom: var(--m16);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+// resoponsive css start 
+
+@media(max-width:991px) {
+    .adsSec {
+        padding: 50px 0px 50px 0px;
+
+        .adsSecWrapper {
+            flex-wrap: wrap;
+
+            .adsInnerBoxOne {
+                width: var(--width100);
+            }
+
+            .adsInnerBoxTwo {
+                width: var(--width100);
+            }
+        }
+    }
+}
+
+@media(max-width:500px) {
+    .adsSec {
+        .adsSecWrapper {
+            .adsInnerBoxOne {
+                .imgBoxOne {
+                    .textBox {
+                        .titleBox {
+                            h2 {
+                                font-size: var(--fs26);
+                            }
+
+                            h4 {
+                                font-size: var(--fs24);
+                            }
+                        }
+                    }
+                }
+
+                .imgBoxTwo {
+                    .textBox {
+                        .titleBox {
+                            h2 {
+                                font-size: var(--fs26);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

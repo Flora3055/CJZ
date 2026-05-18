@@ -1,0 +1,257 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Banner Section css
+  02. Responsive css
+
+**********************************************/
+
+.bannerSec {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+
+  .bannerSecWrapper {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    display: flex;
+
+    .bannerInnerBoxOne {
+      width: var(--width50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .bannerTextBox {
+        width: var(--width100);
+
+        h1 {
+          font-family: "Kalnia";
+          font-weight: var(--fw500);
+          font-size: var(--fs90);
+          color: var(--text-black);
+          margin-bottom: var(--m30);
+        }
+        p {
+          font-weight: var(--fw400);
+          font-size: var(--fs16);
+          color: var(--dark01);
+          margin-bottom: var(--m60);
+        }
+      }
+    }
+    .bannerInnerBoxTwo {
+      width: var(--width50);
+      display: flex;
+      position: relative;
+      // justify-content: center;
+      // align-items: center;
+
+      .bannerImgBox {
+        width: var(--width100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        position: relative;
+        img {
+          border: 2px solid var(--chocolate);
+          border-radius: 300px;
+          padding: 20px;
+        }
+      }
+      .bannerSideContent {
+        position: absolute;
+        width: 100%;
+        max-width: 463px;
+        height: 800px;
+        background-color: var(--chocolate);
+        top: -110px;
+        right: -115px;
+        position: absolute;
+        border-radius: 0px 0px 230px 230px;
+        h2 {
+          font-family: "Kalnia";
+          font-weight: var(--fw500);
+          color: var(--dark02);
+          font-size: 120px;
+          position: absolute;
+          bottom: 325px;
+          left: 115px;
+          transform: rotate(90deg);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        // &::before {
+        //   content: "";
+        //   width: 463px;
+        //   height: 800px;
+        //   background-color: var(--chocolate);
+        //   top: -110px;
+        //   left: -100px;
+        //   position: absolute;
+        //   border-radius: 0px 0px 230px 230px;
+        // }
+      }
+    }
+  }
+}
+
+
+// responsive css start 
+
+@media (max-width: 1599px) {
+  .bannerSec {
+    .bannerSecWrapper {
+      .bannerInnerBoxTwo {
+        .bannerImgBox {
+          img {
+            max-width: 450px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1499px) {
+  .bannerSec {
+    .bannerSecWrapper {
+      .bannerInnerBoxTwo {
+        .bannerSideContent {
+          max-width: 370px !important;
+          right: -20px !important;
+
+          h2 {
+            font-size: 80px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .bannerSec .bannerSecWrapper .bannerInnerBoxTwo .bannerSideContent {
+    max-width: 370px !important;
+    right: -12px !important;
+  }
+}
+
+@media (max-width: 1439px) {
+  .bannerSec {
+    .bannerSecWrapper {
+      .bannerInnerBoxOne {
+        .bannerTextBox {
+          h1 {
+            font-size: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .bannerSec {
+    .bannerSecWrapper {
+      flex-wrap: wrap;
+
+      .bannerInnerBoxOne {
+        width: 100%;
+        margin-bottom: 50px;
+
+        .bannerTextBox {
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h1 {
+            font-size: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          p {
+            text-align: center;
+            max-width: 800px;
+           margin-bottom: 40px;
+          }
+        }
+      }
+      .bannerInnerBoxTwo {
+        width: 100%;
+      }
+    }
+  }
+
+
+
+.bannerSec {
+	.bannerSecWrapper {
+		.bannerInnerBoxTwo {
+			.bannerSideContent {
+				display: none;
+			}
+		}
+	}
+}
+
+}
+
+
+
+@media (max-width:767px) {
+.bannerSec {
+	.bannerSecWrapper {
+		.bannerInnerBoxOne {
+			.bannerTextBox {
+				h1 {
+					font-size: 50px;
+				}
+        p{
+          max-width: 500px;
+        }
+			}
+		}
+    .bannerInnerBoxTwo {
+			.bannerImgBox {
+				img {
+					max-width: 330px;
+				}
+			}
+		}
+	}
+}
+}
+
+
+
+@media (max-width:500px) {
+.bannerSec {
+	.bannerSecWrapper {
+    .bannerInnerBoxOne {
+			.bannerTextBox {
+				h1 {
+					font-size: 35px;
+				}
+			}
+    }
+    .bannerInnerBoxTwo {
+			.bannerImgBox {
+				img {
+					max-width: 250px;
+				}
+			}
+		}
+	}
+}
+}

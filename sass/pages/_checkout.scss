@@ -1,0 +1,651 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Check Out Section css
+  02. Responsive css
+
+**********************************************/
+
+.checkout-container {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: 100px 0px;
+
+  .coupon-banner {
+    .athenacommerceInfo {
+      margin-bottom: var(--m30);
+      font-family: 'lato';
+      font-weight: var(--fw400);
+      font-size: var(--fs20);
+      color: var(--text-black);
+
+      a {
+        color: var(--chocolate);
+      }
+    }
+
+    .card {
+      width: var(--width100);
+      margin-bottom: var(--m30);
+      // padding: 30px;
+      max-width: 494px;
+      margin-top: 4px;
+
+      .couponInfoBox {
+        .couponInner {
+          display: flex;
+          gap: 10px;
+
+          .row-first {
+            width: 100%;
+            max-width: 250px;
+
+            input {
+              width: 100%;
+              padding: 11px 0px 11px 11px;
+              font-family: 'lato';
+              font-weight: var(--fw400);
+              font-size: var(--fs16);
+              color: var(--dark01);
+              outline: none;
+              border: 1px solid var(--dark01);
+              border-radius: 0;
+              background-color: var(--white);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .checkout-content {
+    display: flex;
+    justify-content: space-between;
+    // margin-top: 20px;
+    gap: 30px;
+
+    .billing-details {
+      width: 60%;
+
+      .commonHeading {
+        h5 {
+          margin-bottom: 30px;
+
+        }
+      }
+
+      .form-row {
+        margin-bottom: 10px;
+
+        .row {
+          row-gap: 20px;
+        }
+
+        .formGroup {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          label {
+            font-weight: var(--fw400);
+            font-size: var(--fs20);
+            color: var(--dark01);
+
+          }
+
+          input {
+            width: 100%;
+            height: 60px;
+            background-color: #F9F9F9;
+            outline: none;
+            border: none;
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--dark01);
+            padding: 18px 20px;
+          }
+
+          .selectFiled {
+            width: 100%;
+            height: 60px;
+            background-color: #F9F9F9;
+            outline: none;
+            border: none;
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--dark01);
+            padding: 18px 20px;
+            background-image: url(../images/black-arrow.png);
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            appearance: none;
+          }
+        }
+
+
+        .createAccountBox {
+          margin-top: 20px;
+
+          .checkboxSection {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+             input{
+              display: none;
+             }
+
+
+            label {
+              position: relative;
+              cursor: pointer;
+              font-family: 'lato';
+              font-weight: var(--fw400);
+              font-size: var(--fs20);
+              color: var(--dark01);
+
+              &::before {
+                content: '';
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: 2px solid #858585;
+                padding: 8px;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-right: 5px;
+              }
+            }
+
+            input:checked+label:after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 10px;
+              left: 7px;
+              width: 6px;
+              height: 12px;
+              border: solid var(--chocolate);
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+            }
+          }
+
+          .card {
+            border: none;
+          }
+        }
+
+        .additionalInfo {
+          margin-top: var(--m20);
+
+          .commonHeading {
+            h5 {
+              color: var(--text-black);
+              margin-bottom: 20px;
+            }
+          }
+
+          textArea {
+            resize: none;
+            overflow: auto;
+            padding: 10px 15px;
+            min-height: 190px;
+            resize: none;
+            outline: none;
+            border: 1px solid var(--dark01);
+            background-color: var(--white);
+            color:var(--dark01);
+          }
+        }
+      }
+
+
+
+    }
+
+    .checkoutOrderSummaryBox {
+      width: 40%;
+      background: #f9e9dd;
+      padding: 20px;
+
+      .checkoutTextBox {
+        h2 {
+          font-family: 'Kalnia';
+          font-weight: var(--fw500);
+          font-size: var(--fs26);
+          color: var(--text-black);
+          margin-bottom: var(--m20);
+          text-transform: uppercase;
+        }
+      }
+
+      .cart_total_Box {
+        width: var(--width100);
+        position: relative;
+
+        .cart_total_inner_box {
+          border: 1px solid var(--dark01);
+          margin-bottom: var(--m20);
+
+          ul {
+            width: var(--width100);
+            display: flex;
+            flex-direction: column;
+            padding: var(--p10);
+            gap: 10px;
+
+            li {
+              width: var(--width100);
+
+              .inner_box {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                  font-family: 'lato';
+                  font-weight: var(--fw400);
+                  font-size: var(--fs20);
+                  color: var(--text-black);
+                }
+
+                .gray_txt {
+                  color: var(--dark01);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .gift-card_apply {
+        .commonHeading {
+          h5 {
+            color: var(--text-black);
+            margin-bottom: 20px;
+          }
+        }
+
+        .cardInputBox {
+          display: flex;
+          align-items: center;
+          gap: 13px;
+
+          input {
+            width: 100%;
+            outline: none;
+            border: 1px solid var(--dark01);
+            padding: var(--p14) var(--p10);
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--dark01);
+            background-color: var(--white);
+          }
+
+          a {
+            border: 1px solid transparent;
+            padding: var(--p14) var(--p40);
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            background-color: var(--chocolate);
+            font-size: var(--fs16);
+            color: var(--white);
+            transition: all 0.5s;
+
+            &:hover {
+              background-color: transparent;
+              color: var(--chocolate);
+              border-color: var(--chocolate);
+            }
+          }
+        }
+      }
+
+      .cash-delivery_box {
+        margin-top: var(--m20);
+        border: 1px solid var(--dark01);
+        margin-bottom: var(--m20);
+
+
+        .cashDeliveryInputBox {
+          border-bottom: 1px solid var(--dark01);
+          padding: var(--p10);
+
+          .commonHeading {
+            h5 {
+              color: var(--text-black);
+              margin-bottom: 20px;
+            }
+          }
+
+          input {
+            width: 100%;
+            outline: none;
+            border: 1px solid var(--dark01);
+            padding: var(--p14) var(--p10);
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--dark01);
+            background-color: var(--white);
+          }
+
+        }
+
+        .textBox {
+          padding: var(--p10);
+
+          p {
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--dark01);
+
+          }
+
+          a {
+            display: inline-flex;
+            border: 1px solid transparent;
+            padding: var(--p14) var(--p40);
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            background-color: var(--chocolate);
+            font-size: var(--fs16);
+            color: var(--white);
+            transition: all 0.5s;
+            margin-top: var(--m20);
+
+            &:hover {
+              background-color: transparent;
+              color: var(--chocolate);
+              border-color: var(--chocolate);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.checkoutOderBox {
+  width: 40%;
+  background: #f7f7f7;
+  padding: 25px;
+
+  .commonHeading {
+    margin-bottom: var(--m20);
+
+    h5 {
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--text-black);
+    }
+  }
+
+
+  .orderDetailsBox {
+    background-color: var(--white);
+    padding: 20px;
+
+    .oderTitleBox {
+      width: var(--width100);
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--dark01);
+        padding-bottom: var(--p16);
+
+        li {
+          font-family: 'lato';
+          font-weight: var(--fw400);
+          font-size: var(--fs20);
+          color: var(--text-black);
+        }
+      }
+    }
+
+    .oderListBox {
+      width: var(--width100);
+      position: relative;
+
+      .orderItemBox {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--dark01);
+        padding-bottom: 15px;
+        padding-top: var(--p16);
+
+        .productBox {
+          display: flex;
+          gap: 15px;
+
+          img {
+            width: 60px;
+            height: 60px;
+          }
+
+          .contentBox {
+            h4 {
+              font-family: 'lato';
+              font-weight: var(--fw400);
+              font-size: var(--fs16);
+              color: var(--dark01);
+            }
+
+            .qty {
+              p {
+                font-family: 'lato';
+                font-weight: var(--fw400);
+                font-size: var(--fs16);
+                color: var(--dark01);
+              }
+            }
+          }
+        }
+
+        .subtotal {
+          font-family: 'lato';
+          font-weight: var(--fw400);
+          font-size: var(--fs16);
+          color: var(--dark01);
+        }
+      }
+    }
+
+    .orderSummary {
+      width: var(--width100);
+      position: relative;
+
+      ul {
+        .subHeading {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid var(--dark01);
+          padding-bottom: var(--p16);
+          padding-top: var(--p16);
+
+          .titleBox {
+            h5 {
+              font-family: 'lato';
+              font-weight: var(--fw400);
+              font-size: var(--fs20);
+              color: var(--text-black);
+            }
+          }
+
+          .amountBox {
+            p {
+              font-family: 'lato';
+              font-weight: var(--fw400);
+              font-size: var(--fs20);
+              color: var(--chocolate);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .paymentSection {
+    margin-top: 25px;
+
+    .amountBox {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        li {
+          display: flex;
+          align-items: center;
+
+          label {
+            img {
+              width: 116px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .paypalInfo {
+      background-color: var(--white);
+      padding: var(--p16);
+      margin-top: var(--m16);
+
+      p {
+        font-family: 'lato';
+        font-weight: var(--fw400);
+        font-size: var(--fs16);
+        color: var(--dark01);
+
+        a {
+          color: var(--text-black);
+        }
+      }
+    }
+
+
+    .privacyText {
+      margin-top: var(--m20);
+
+      form {
+        .form-group {
+          input {
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+          }
+
+          label {
+            position: relative;
+            cursor: pointer;
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--text-black);
+
+            &::before {
+              content: '';
+              -webkit-appearance: none;
+              background-color: transparent;
+              border: 2px solid #858585;
+              padding: 8px;
+              display: inline-block;
+              position: relative;
+              vertical-align: middle;
+              cursor: pointer;
+              margin-right: 5px;
+            }
+          }
+
+          input:checked+label:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 7px;
+            width: 6px;
+            height: 12px;
+            border: solid var(--chocolate);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .payBtn {
+      width: var(--width100);
+      margin-top: var(--m20);
+
+      button {
+        width: var(--width100);
+      }
+    }
+  }
+}
+
+
+
+// responsive css start 
+
+
+@media(max-width:1199px) {
+  .checkout-container .checkout-content {
+    flex-wrap: wrap;
+  }
+
+  .checkout-container .checkout-content .billing-details {
+    width: 100%;
+  }
+
+  .checkout-container .checkout-content .checkoutOderBox {
+    width: 100%;
+  }
+}
+
+@media(max-width:991px) {
+  .checkout-container {
+    padding: 50px 0px;
+  }
+}
+
+@media(max-width:500px) {
+  .checkoutOderBox .orderDetailsBox .oderListBox .orderItemBox .productBox {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .checkoutOderBox {
+    padding: 10px;
+  }
+
+  .checkout-container .coupon-banner .athenacommerceInfo {
+    font-size: var(--fs14);
+  }
+
+  .checkout-container .coupon-banner .card .couponInfoBox .couponInner .row-last .btnOne {
+    width: 105px;
+    font-size: var(--fs12);
+  }
+
+  .checkout-container .checkout-content .billing-details .form-row .additionalInfo .commonHeading h5 {
+    font-size: var(--fs20);
+  }
+}

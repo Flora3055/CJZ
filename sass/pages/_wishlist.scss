@@ -1,0 +1,79 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. WishList Section css
+  02. Responsive css
+
+**********************************************/
+
+.wishListSection {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .wishListMainBox {
+        width: var(--width100);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .wistListIconBox {
+            margin-bottom: 30px;
+
+            a {
+                svg {
+                    width: 150px;
+                    height: 150px;
+
+                    path {
+                        fill: rgb(227 45 45 / 19%);
+                    }
+                }
+            }
+        }
+
+        h4 {
+            font-family: "lato";
+            font-size: var(--fs48);
+            font-weight: var(--fw600);
+            color: var(--chocolate);
+            text-align: center;
+            margin-bottom: var(--m30);
+        }
+
+        p {
+            max-width: 550px;
+            font-family: "lato";
+            font-size: var(--fs18);
+            font-weight: var(--fw600);
+            color: var(--dark01);
+            text-align: center;
+            margin-bottom: var(--m30);
+        }
+    }
+}
+
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .wishListSection {
+        padding: var(--p50) var(--p0);
+    }
+}
+
+@media(max-width:600px) {
+    .wishListSection .wishListMainBox h4 {
+        font-size: var(--fs30);
+    }
+
+    .wishListSection .wishListMainBox p {
+        font-size: var(--fs16);
+    }
+}

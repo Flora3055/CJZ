@@ -1,0 +1,341 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Img Slider Section css
+  02. Responsive css
+
+**********************************************/
+
+.imgSliderSec {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: var(--p100) 0px;
+
+  .imgSliderWrapper {
+    width: var(--width100);
+    position: relative;
+
+    .imgSliderBox {
+      margin-top: 60px;
+
+      .imgSliderCardBox {
+        width: var(--width100);
+        position: relative;
+
+        .imgBox {
+          width: var(--width100);
+          position: relative;
+
+          img {
+            width: var(--width100);
+          }
+
+          .textBox {
+            width: var(--width100);
+            min-width: 410px;
+            position: absolute;
+            bottom: 200px;
+            left: 90px;
+            transform: rotate(270deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+              a {
+                width: var(--width100);
+                font-family: "Kalnia";
+                font-weight: var(--fw500);
+                font-size: var(--fs48);
+                color: var(--text-black);
+                display: inline-flex;
+              }
+            }
+          }
+        }
+
+        .paddingTop {
+          padding-top: 50px;
+        }
+      }
+
+      .owl-item.active {
+        opacity: 0.5;
+      }
+
+      .owl-item.active.center {
+        opacity: inherit;
+      }
+
+      .owl-nav {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: end;
+        gap: 30px;
+        /* margin-top: 40px; */
+        top: -114px;
+        right: 250px;
+
+        .owl-prev {
+          width: 50px;
+          height: 50px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          border: 1px solid var(--chocolate);
+          transition: all 0.5s;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          &:hover {
+            background-color: var(--chocolate);
+
+            svg {
+              path {
+                fill: var(--white);
+              }
+            }
+          }
+        }
+
+        .owl-next {
+          width: 50px;
+          height: 50px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          border: 1px solid var(--chocolate);
+          transition: all 0.5s;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          &:hover {
+            background-color: var(--chocolate);
+
+            svg {
+              path {
+                fill: var(--white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive css start 
+
+@media (max-width: 1699px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .imgSliderCardBox {
+          .imgBox {
+            .textBox {
+              left: 60px;
+
+              h2 {
+                a {
+                  font-size: 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1599px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .imgSliderCardBox {
+          .imgBox {
+            .textBox {
+              left: 45px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1499px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .imgSliderCardBox {
+          .imgBox {
+            .textBox {
+              left: 20px;
+            }
+          }
+        }
+
+        .owl-nav {
+          right: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1299px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .imgSliderCardBox {
+          .imgBox {
+            .textBox {
+              left: -15px;
+
+              h2 {
+                a {
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .owl-nav {
+          justify-content: center;
+          top: inherit;
+          right: inherit;
+          bottom: -65px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .imgSliderCardBox {
+          .imgBox {
+            .textBox {
+              left: -15px;
+
+              h2 {
+                a {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .imgSliderSec .imgSliderWrapper .imgSliderBox .imgSliderCardBox .paddingTop {
+    padding-top: 0px;
+  }
+
+  .imgSliderSec .imgSliderWrapper .imgSliderBox .owl-nav .owl-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .imgSliderSec .imgSliderWrapper .imgSliderBox .owl-nav .owl-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .imgSliderSec .imgSliderWrapper .imgSliderBox {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 670px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .imgSliderCardBox {
+          .imgBox {
+            .textBox {
+              left: -50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .imgSliderSec {
+    .imgSliderWrapper {
+      .imgSliderBox {
+        .imgSliderCardBox {
+          .imgBox {
+            .textBox {
+              bottom: 300px;
+              left: 220px;
+              justify-content: start;
+
+              h2 {
+                a {
+                  font-size: 48px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+  .imgSliderSec .imgSliderWrapper .imgSliderBox .imgSliderCardBox .imgBox .textBox {
+    bottom: 300px;
+    left: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  .imgSliderSec .imgSliderWrapper .imgSliderBox .imgSliderCardBox .imgBox .textBox h2 a {
+    font-size: 34px;
+  }
+
+  .imgSliderSec .imgSliderWrapper .imgSliderBox .imgSliderCardBox .imgBox .textBox {
+    bottom: 300px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .imgSliderSec .imgSliderWrapper .imgSliderBox .imgSliderCardBox .imgBox .textBox {
+    bottom: 300px;
+    left: 70px;
+  }
+}

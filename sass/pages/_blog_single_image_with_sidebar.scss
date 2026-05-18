@@ -1,0 +1,345 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+
+/************ TABLE OF CONTENTS ***************
+
+  01. blog single image with sidebar Section css
+  02. Form css Start 
+  03. Responsive css
+
+**********************************************/
+
+.athenaFashionBlogGroup {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .athenaFashionBlogGroupInner {
+        .athenaFashionBlogGroupItem {
+            .blogSingleImageWithSidebarContentBox {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 44px 40px;
+                background-color: var(--dark02);
+                margin-bottom: 60px;
+
+                .blogSingleImageWithSidebarTextBox {
+                    .person_name {
+                        font-family: 'lato';
+                        font-weight: var(--fw400);
+                        font-size: var(--fs20);
+                        margin-top: 10px;
+
+                        a {
+                            color: var(--dark01);
+                        }
+
+                    }
+                }
+            }
+
+            .profileCardBox {
+                width: 100%;
+                margin-bottom: var(--m60);
+
+                .profileContentBox {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    margin-bottom: var(--m30);
+
+                    .profile-img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .profileInfoBox {
+                        p {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs20);
+                            margin-top: 10px;
+
+                            a {
+                                color: var(--dark01);
+                            }
+                        }
+                    }
+                }
+
+                .socialLinks {
+                    width: 100%;
+                    border-top: 1px solid var(--dark01);
+                    border-bottom: 1px solid var(--dark01);
+
+                    ul {
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+                        padding: var(--p20) var(--p0);
+
+                        li {
+                            a {
+                                transition: all 0.5s;
+
+                                svg {
+                                    transition: all 0.5s;
+
+                                    path {
+                                        transition: all 0.5s;
+                                    }
+                                }
+
+                                &:hover {
+                                    svg {
+                                        path {
+                                            fill: var(--text-black);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .blogSingleImgPagination {
+                .pagination {
+                    padding-bottom: 0;
+                    padding-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+// form css start 
+
+.leaveReplyInner {
+    width: 100%;
+
+    .commonInnerPageHeading {
+        margin-bottom: var(--m30);
+    }
+
+    .ratingInfoBox {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .rating-container {
+            .stars {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                cursor: pointer;
+
+                .star {
+                    font-size: var(--fs30);
+                    color: #ccc;
+                    transition: color 0.2s;
+
+                    &.active {
+                        color: var(--yellow); // gold
+                    }
+
+                    &:hover,
+                    &:hover~.star {
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .leaveReplyForm {
+        form {
+
+            .formGroup {
+                label {
+                    font-family: 'lato';
+                    font-weight: var(--fw400);
+                    font-size: var(--fs20);
+                    color: var(--dark01);
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 50px;
+                    border: none;
+                    border-bottom: 1px solid var(--dark01);
+                    outline: none;
+                    resize: none;
+                    border-radius: 0;
+                    padding: 10px 0px 0px 10px;
+                    color: var(--dark01);
+                    box-shadow: none;
+                }
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    border: none;
+                    border-bottom: 1px solid var(--dark01);
+                    outline: none;
+                    resize: none;
+                    border-radius: 0;
+                    padding: 0px 0px 0px 10px;
+                    color: var(--dark01);
+                    box-shadow: none;
+                }
+            }
+
+            .marbottom {
+                margin-bottom: var(--m40);
+            }
+        }
+    }
+}
+
+.leaveReplyInner2 {
+    background-color: var(--sand);
+    padding: var(--p30);
+    margin-top: var(--m60);
+
+    .leaveReplyForm form {
+        .formGroup {
+            input {
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+.RememberForgotPassword {
+    .form-group {
+        label {
+            &:before {
+                background-color: transparent;
+                border: 2px solid #858585;
+                ;
+            }
+        }
+    }
+}
+
+.RememberForgotPassword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    label {
+        position: relative;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #858585;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        img {
+            width: 20px;
+            object-fit: contain;
+        }
+
+        &:before {
+            content: '';
+            -webkit-appearance: none;
+            appearance: none;
+            border: 1px solid #FFF4F8;
+            background-color: #FFF4F8;
+            padding: 8px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            width: 12px;
+            height: 12px;
+        }
+
+        a {
+            color: var(--chocolate);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    input {
+        &#remember {
+            display: none;
+        }
+
+        &:checked+label {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 7px;
+                width: 6px;
+                height: 12px;
+                border: solid var(--chocolate);
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+
+}
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .athenaFashionBlogGroup .athenaFashionBlogGroupInner .athenaFashionBlogGroupItem .blogSingleImageWithSidebarContentBox {
+        margin-bottom: 30px;
+    }
+
+    .athenaFashionBlogGroup .athenaFashionBlogGroupInner .athenaFashionBlogGroupItem .athenaFashionBlogGroupContent {
+        margin-bottom: var(--m30);
+    }
+
+    .athenaFashionBlogPagination .pagination {
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width:600px) {
+    .leaveReplyInner .ratingInfoBox {
+        flex-wrap: wrap;
+    }
+
+    .blogSingleImageWithSidebarContentBox {
+        padding: 20px 22px !important;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .RememberForgotPassword label {
+        font-size: 14px;
+    }
+
+    form .LoginBtn {
+        margin-top: var(--m30) !important;
+    }
+
+    .loginRegisterFormGroup form .RememberForgotPassword {
+        margin-bottom: 0;
+    }
+}

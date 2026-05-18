@@ -1,0 +1,507 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Trending Product Section css
+  02. Responsive css
+
+**********************************************/
+
+.trendingProductSec {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: var(--p50) 0px;
+
+  .trendingProductWrapper {
+    width: var(--width100);
+    position: relative;
+
+    .titleBox {
+      width: var(--width100);
+      position: relative;
+    }
+  }
+
+  .trendingProductSliderBox {
+    width: var(--width100);
+    padding-left: 273px;
+    position: relative;
+    margin-top: 80px;
+
+    .owl-nav {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: end;
+      gap: 30px;
+      /* margin-top: 40px; */
+      top: -133px;
+      right: 250px;
+
+      .owl-prev {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid var(--chocolate);
+        transition: all 0.5s;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          background-color: var(--chocolate);
+
+          svg {
+            path {
+              fill: var(--white);
+            }
+          }
+        }
+      }
+
+      .owl-next {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid var(--chocolate);
+        transition: all 0.5s;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          background-color: var(--chocolate);
+
+          svg {
+            path {
+              fill: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.trendingProductCardBox {
+  position: relative;
+
+  .cardImgBox {
+    width: 100%;
+    position: relative;
+
+    .swap-on-hover {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      height: 500px;
+
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        object-fit: cover;
+      }
+
+      .swap-on-hover__front-image {
+        z-index: 99;
+        transition: opacity 0.5s linear;
+        cursor: pointer;
+      }
+    }
+
+    .swap-on-hover3 {
+      min-height: 939px;
+    }
+
+    .discount {
+      width: 80px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--chocolate);
+      gap: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+
+      p {
+        margin: 0;
+        color: var(--white);
+      }
+
+      a {
+        line-height: 8px;
+      }
+    }
+
+    .greencolor {
+      background-color: var(--green);
+    }
+
+    .redcolor {
+      background-color: var(--red);
+    }
+
+    .skyColor {
+      background-color: var(--sky);
+    }
+
+    .skyColor3 {
+      top: 40px;
+    }
+
+    .iconListBox {
+      position: absolute;
+      top: 15px;
+      right: -40px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      transition: all 0.5s ease-out;
+      overflow: hidden;
+
+      display: none;
+      z-index: 99;
+
+      li {
+        .btn {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--white);
+          border-radius: 50px;
+        }
+      }
+    }
+
+    .addBtn {
+      height: 54px;
+      position: absolute;
+      bottom: -30px;
+      left: 15px;
+      right: 15px;
+      transition: all 0.5s;
+      overflow: hidden;
+      opacity: 0;
+      z-index: 99;
+
+      a {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      .iconListBox {
+        right: 15px;
+        display: block;
+      }
+
+      .addBtn {
+        bottom: 15px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .cardImgBox2 {
+    // .swap-on-hover {
+    //   img {
+    //     border-radius: 20px;
+    //   }
+    // }
+
+    .swap-on-hover2 {
+      height: 364px;
+      min-height: auto;
+    }
+  }
+
+  .cardTextBox {
+    position: relative;
+    margin-top: 15px;
+
+    .rating-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .titleBox {
+        .font20 {
+          font-size: var(--fs20);
+        }
+      }
+
+      .rating {
+        a {
+          display: flex;
+          align-items: center;
+
+          span {
+            font-weight: var(--fw400);
+            font-size: var(--fs20);
+            color: var(--text-black);
+          }
+        }
+      }
+    }
+
+    .commonHeading {
+      h6 {
+        margin: 5px 0px;
+      }
+    }
+
+    p {
+      font-weight: var(--fw500);
+      font-size: var(--fs30);
+      color: var(--text-black);
+
+      del {
+        font-weight: var(--fw500);
+        font-size: var(--fs30);
+        color: var(--dark01);
+      }
+    }
+  }
+
+  &:hover {
+    .cardTextBox {
+      .rating-box {
+        h4 {
+          a {
+            color: var(--text-black);
+          }
+        }
+      }
+
+      h5 {
+        color: var(--text-black);
+      }
+    }
+  }
+}
+
+.trendingProductCardBox .cardImgBox2 .swap-on-hover {
+  height: 392px;
+}
+
+.ion-icon.active {
+  animation: like 0.5s 1;
+  fill: red;
+  stroke: none;
+}
+
+.ion-icon {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 30;
+  transition: all 0.5s;
+}
+
+@-webkit-keyframes like {
+  0% {
+    transform: scale(1);
+  }
+
+  90% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.swap-on-hover:hover .swap-on-hover__front-image {
+  opacity: 0;
+}
+
+// social media icon css start
+// .icon-wrapper {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 40px;
+//   width: 40px;
+//   color: #333;
+//   background: #fff;
+//   cursor: pointer;
+//   border-radius: 50%;
+//   transition: 250ms color;
+// }
+
+// responsive css start
+
+@media (max-width: 1699px) {
+  .trendingProductSec {
+    .trendingProductSliderBox {
+      padding-left: 115px;
+    }
+  }
+
+  .bannerSec {
+    .bannerSecWrapper {
+      .bannerInnerBoxTwo {
+        .bannerSideContent {
+          h2 {
+            font-size: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  .bannerSec {
+    .bannerSecWrapper {
+      .bannerInnerBoxTwo {
+        .bannerSideContent {
+          max-width: 415px;
+          right: -60px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1499px) {
+  .trendingProductSec {
+    .trendingProductSliderBox {
+      padding-left: 70px;
+
+      .owl-nav {
+        right: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .trendingProductSec {
+    .trendingProductSliderBox {
+      padding-left: 15px;
+
+      .trendingProductCardBox {
+        .cardTextBox {
+          .rating-box {
+            .titleBox {
+              h4 {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .owl-nav {
+      right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .trendingProductSec {
+    .titleBox .testi {
+      font-size: 64px;
+      top: 0px;
+    }
+
+    .trendingProductSliderBox {
+      .trendingProductCardBox {
+        .cardTextBox {
+          p {
+            font-size: 20px;
+
+            del {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .trendingProductSec {
+    .trendingProductSliderBox {
+      .owl-nav {
+        justify-content: center;
+        top: inherit;
+        right: inherit;
+        bottom: -30px;
+      }
+    }
+  }
+
+  .trendingProductSec .titleBox .testi {
+    display: none;
+  }
+
+  .trendingProductSec {
+    padding: var(--p50) var(--p0) var(--p50) var(--p0);
+  }
+
+  .trendingProductSec .trendingProductSliderBox .owl-nav .owl-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .trendingProductSec .trendingProductSliderBox .owl-nav .owl-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .trendingProductSec .trendingProductSliderBox {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .trendingProductSec {
+    .trendingProductSliderBox {
+      margin-top: 30px;
+    }
+  }
+
+  .trendingProductCardBox .cardTextBox .titleBox h4 {
+    font-size: var(--fs18);
+  }
+
+  .trendingProductCardBox .cardTextBox p {
+    font-size: var(--fs20);
+  }
+
+  .trendingProductCardBox .cardTextBox p del {
+    font-size: var(--fs20);
+  }
+}
+
+@media (max-width: 600px) {
+  .trendingProductSec .trendingProductSliderBox {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

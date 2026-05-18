@@ -1,0 +1,242 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. blog single slider with sidebar Section css
+  02. Comment section scss
+  03. Responsive css
+
+**********************************************/
+
+.athenaFashionBlogGroup {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .athenaFashionBlogGroupInner {
+        .athenaFashionBlogGroupItem {
+            .athenaFashionBlogGroupContentInner {
+                .drop-cap::first-letter {
+                    font-family: 'Kalnia';
+                    font-weight: var(--fw600);
+                    font-size: var(--fs48);
+                    float: left;
+                    line-height: 1;
+                    margin-right: 8px;
+                    color: var(--dark01);
+                }
+
+                .highlight {
+                    color: var(--chocolate);
+                    text-align: center;
+                }
+            }
+
+            .blogSingleSliderWithSideBarBox {
+                width: 100%;
+
+                .blogSingleSliderWithSideBarImgBox {
+                    display: flex;
+                    gap: 30px;
+                    margin-bottom: var(--m30);
+
+                    .blogImgBoxOne {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .blogImgBoxTwo {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .aboutBloggerDetailBox {
+                width: 100%;
+                border-bottom: 1px solid var(--dark01);
+                padding-bottom: var(--m30);
+                margin-bottom: var(--m26);
+
+                ul {
+                    display: flex;
+                    gap: 20px;
+
+                    li {
+                        .textBox {
+                            h5 {
+                                font-family: 'lato';
+                                font-weight: var(--fw400);
+                                font-size: var(--fs20);
+                                margin-bottom: var(--m6);
+
+                                a {
+                                    color: var(--text-black);
+                                }
+                            }
+
+                            h6 {
+                                font-family: 'lato';
+                                font-weight: var(--fw400);
+                                font-size: var(--fs16);
+                                color: var(--dark01);
+                                margin-bottom: var(--m6);
+                            }
+
+                            p {
+                                font-family: 'lato';
+                                font-weight: var(--fw400);
+                                font-size: var(--fs16);
+                                color: var(--dark01);
+                                margin-bottom: var(--m6);
+                            }
+
+                            span {
+                                font-family: 'lato';
+                                font-weight: var(--fw500);
+                                font-size: var(--fs16);
+                                color: var(--text-black);
+                                font-style: italic;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// comment section css start 
+
+.athenaFashionCommentWrapperBox {
+    width: 100%;
+
+    .athenaFashionCommenInfo {
+        .athenaFashionCommentsGroup {
+            margin-top: var(--m30);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: var(--m60);
+
+            .athenaFashionCommentsItem {
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                align-items: center;
+                gap: 20px;
+
+                .athenaFashionCommentsImg {
+                    a {
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .athenaFashionCommentsTxt {
+                    .athenaFashionTitleText {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 5px;
+
+                        span {
+                            font-family: "lato";
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                        }
+
+                        a {
+                            font-family: "lato";
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                        }
+                    }
+
+                    h5 {
+                        font-family: "lato";
+                        font-weight: var(--fw400);
+                        font-size: var(--fs20);
+                        margin-bottom: 5px;
+
+
+                        a {
+                            color: var(--text-black);
+                        }
+                    }
+
+                    p {
+                        font-family: "lato";
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: var(--dark01);
+                    }
+                }
+            }
+
+            .athenaFashionCommentsItem2 {
+                padding-left: 100px;
+            }
+        }
+    }
+}
+
+
+
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .aboutBlogSideBarSection {
+        padding: var(--p30) var(--p0);
+    }
+}
+
+@media(max-width:767px) {
+    .athenaFashionBlogGroup .athenaFashionBlogGroupInner .athenaFashionBlogGroupItem .tipsForFutureWrapper .tipsForFutureInfoBox {
+        flex-wrap: wrap;
+    }
+
+    .athenaFashionBlogGroup .athenaFashionBlogGroupInner .athenaFashionBlogGroupItem .tipsForFutureWrapper .tipsForFutureInfoBox .tipsForFutureContentBox {
+        width: var(--width100) !important;
+    }
+
+    .athenaFashionBlogGroup .athenaFashionBlogGroupInner .athenaFashionBlogGroupItem .tipsForFutureWrapper .tipsForFutureInfoBox .tipsForFutureImgBox {
+        width: var(--width100) !important;
+    }
+
+    .athenaFashionBlogGroup .athenaFashionBlogGroupInner .athenaFashionBlogGroupItem .blogSingleVideoWithSideBarBox p {
+        padding: 20px 30px !important;
+    }
+}
+
+
+@media(max-width:600px) {
+    .athenaFashionCommentWrapperBox .athenaFashionCommenInfo .athenaFashionCommentsGroup .athenaFashionCommentsItem2 {
+        padding-left: 0px;
+    }
+
+    .athenaFashionCommentWrapperBox .athenaFashionCommenInfo .athenaFashionCommentsGroup .athenaFashionCommentsItem {
+        align-items: start;
+        grid-template-columns: 70px 1fr;
+    }
+
+    .athenaFashionCommentWrapperBox .athenaFashionCommenInfo .athenaFashionCommentsGroup .athenaFashionCommentsItem .athenaFashionCommentsImg a img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+    }
+}

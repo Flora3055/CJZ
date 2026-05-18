@@ -1,0 +1,322 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Our blog 02 column with sidebar Section css
+  02. Responsive css
+
+**********************************************/
+
+.toodleBlog {
+  padding: 80px 0;
+}
+
+.athenaBlogSidebar {
+  border: 0.5px solid #FFF4F8;
+  border-radius: 6px;
+  background-color: var(--sand);
+
+
+  .athenaBlogSidebarItem {
+    padding: 30px 0px;
+    border-bottom: 1px dashed rgb(133 133 133 / 20%);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border: 0;
+    }
+
+  }
+
+  .athenaBlogSidebarHeading {
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 40px;
+      color: #102C35;
+    }
+  }
+
+}
+
+
+
+// responsive css start 
+
+@media(max-width:991px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media(max-width:1199px) {
+  .athenaBlogSidebar {
+    padding: 15px;
+  }
+}
+
+@media(max-width:991px) {
+  .athenaBlogSidebar {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 350px;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 1px 0 12px 0px rgb(156 156 156 / 50%);
+    height: 100vh;
+    overflow: auto;
+    z-index: 99999;
+
+    .athenaBlogSidebarInner {
+      position: relative;
+      padding-top: 30px;
+
+      .blogSidebarClose {
+        position: absolute;
+        top: -6px;
+
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    &.athenaBlogSidebarLeft {
+      transform: translateX(-550px);
+      transition: all 0.4s ease;
+      left: 0;
+
+      .athenaBlogSidebarInner {
+        .blogSidebarClose {
+          right: 6px;
+        }
+      }
+    }
+
+    &.athenaBlogSidebarRight {
+      transform: translateX(550px);
+      transition: all 0.4s ease;
+      right: 0;
+
+      .athenaBlogSidebarInner {
+        .blogSidebarClose {
+          left: 15px;
+        }
+      }
+    }
+
+    &.active {
+      transform: translateX(0px);
+    }
+  }
+
+  .evSidebarFilterToggleOuter {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 30px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #102C35;
+      }
+    }
+  }
+
+  .athenaBlogSidebarLeftInner {
+    .evSidebarFilterToggleOuter {
+      justify-content: end;
+    }
+  }
+
+  .athenaBlogSidebarRightInner {
+    .evSidebarFilterToggleOuter {
+      justify-content: start;
+    }
+  }
+
+  .evSidebarFilterToggleOuter {
+    margin-bottom: 15px;
+  }
+
+  .our_blog_02_column_with_sidebar_card_box {
+    margin-top: 30px;
+  }
+
+  .leaveReply .leaveReplyInner .commonInnerPageHeading h2 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+
+  // .toodleCommentsGroup .toodleCommentsItem .toodleCommentsTxt h5 {
+  //   font-size: 20px;
+  //   line-height: 32px;
+  // }
+
+  // .toodleCommentsGroup .toodleCommentsItem .toodleCommentsImg img {
+  //   width: 60px;
+  //   height: 60px;
+  // }
+
+  // .toodleCommentsGroup .toodleCommentsItem {
+  //   grid-template-columns: 60px 1fr;
+  // }
+
+  .socialMediaIconSec .socialMediaIconSecInner .socialMediaLink {
+    width: 50px;
+    height: 50px;
+  }
+
+  .blogNxtPrevPage .blogNxtPrevPageInner {
+    flex-direction: column;
+  }
+
+  .blogCategory,
+  .toodleBlog {
+    padding: 50px 0;
+  }
+}
+
+@media(max-width:767px) {
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner h4,
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner h4 a {
+  //   font-size: 28px;
+  // }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner h4 {
+  //   line-height: 32px;
+  // }
+
+  .toodleBlog {
+    padding: 50px 0;
+  }
+
+  .athenaBlogSidebar .athenaBlogSidebarInner {
+    padding-top: 40px;
+  }
+
+  .leaveReply .leaveReplyInner .commonInnerPageHeading h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@media(max-width:575px) {
+  // .athenaBlogSidebar .athenaBlogSidebarHeading h2 {
+  //   font-size: 18px;
+  //   line-height: 25px;
+  // }
+
+  // .athenaBlogSidebar .athenaBlogSidebarItem {
+  //   padding: 20px 15px;
+  // }
+
+  // .toodleBlogAbout a,
+  // .toodleBlogCardSidebarGroup .toodleBlogCardSidebarItem .toodleBlogCardSidebarContent h4 a,
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupBtn a {
+  //   font-size: 14px;
+  // }
+
+  // .toodleBlogCardSidebarGroup .toodleBlogCardSidebarItem .toodleBlogCardSidebarContent span,
+  // .toodleBlogTagSidebarGroup ul li a,
+  // .toodleBlogCategoryItem .toodleBlogCategoryItemInner .toodleBlogCategoryItemName p,
+  // .toodleBlogCategoryItem .toodleBlogCategoryItemInner .toodleBlogCategoryCount span,
+  // .toodleBlogAbout p,
+  // .athenaBlogSidebar .athenaBlogSidebarSearch .evSearchBar input {
+  //   font-size: 12px;
+  // }
+
+  // .toodleBlogTagSidebarGroup ul {
+  //   gap: 6px;
+  // }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner h4,
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner h4 a {
+  //   font-size: 20px;
+  //   line-height: 26px;
+  // }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupMeta ul {
+  //   gap: 10px;
+  // }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner p,
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupMeta ul li {
+  //   font-size: 14px;
+  // }
+
+  .audio-player .audio-details .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .audio-player .audio-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .audio-player .audio-details .artist {
+    font-size: 16px;
+  }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupSlider .carousel-control-prev {
+  //   left: 18px;
+  // }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupSlider .carousel-control-next {
+  //   right: 18px;
+  // }
+
+  .blogQuteTwo {
+    grid-template-columns: 1fr;
+  }
+
+  .blogQuteTwo .blogQuteIcon {
+    border-right: 0;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.1254901961);
+  }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner.toodleBlogGroupContentInner .toodleBlogDescriptionImg .toodleBlogDescr h5 {
+  //   font-size: 22px;
+  //   line-height: 32px;
+  // }
+
+  .blogNxtPrevPage .blogNxtPrevPageInner .blogPrevPage a p,
+  .blogNxtPrevPage .blogNxtPrevPageInner .blogNxtPage a p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #111111;
+    margin-bottom: 0;
+  }
+
+}
+
+@media(max-width:375px) {
+  .athenaBlogSidebar {
+    width: 100%;
+  }
+
+  // .toodleBlogGroup .toodleBlogGroupInner .toodleBlogGroupItem .toodleBlogGroupContent .toodleBlogGroupContentInner.toodleBlogGroupContentInner .blogUserMsg {
+  //   grid-template-columns: 1fr;
+  // }
+}

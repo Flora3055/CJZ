@@ -1,0 +1,446 @@
+/*-------------------------------------
+    
+	Template Name: Start Up HTML Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2024-25
+-------------------------------------
+
+CSS INDEX
+===================
+
+1. float animation
+2. swing animation
+3. move animation css
+4. rocket animation css
+5. progress bar animation css
+6. rotation animation css 
+7. scroll down animation css start
+8. heart beat animation  css
+9. about page animation
+10. img Circle hover css
+11. wishlist btn animation 
+12. image zoom effect css
+
+----------------------------------------- */
+
+// =====  animtion css start   ===== //
+
+// float animation
+
+@keyframes float {
+    0% {
+  
+      transform: translatey(0px);
+    }
+  
+    50% {
+  
+      transform: translatey(-20px);
+    }
+  
+    100% {
+  
+      transform: translatey(0px);
+    }
+  }
+  
+  // swing animation
+  
+  
+  @keyframes sway {
+    0% {
+      transform: rotate(2deg);
+    }
+  
+    50% {
+      transform: rotate(-2deg);
+    }
+  
+    100% {
+      transform: rotate(2deg);
+    }
+  }
+  
+  // move animation css
+  
+  @keyframes simple-move1 {
+    100% {
+      transform: translate(0px, 20px);
+    }
+  }
+  
+  @keyframes simple-move {
+    100% {
+      transform: translate(20px, 0);
+    }
+  }
+  
+  //  rocket animation css
+  
+  @keyframes launching {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(-80px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  // progress bar animation css
+  
+  @keyframes animateBar {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  // rotation animation css 
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  // scroll down animation css start
+  
+  @-webkit-keyframes fade_move_down {
+    0% {
+      -webkit-transform: translate(0, -10px) rotate(45deg);
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      -webkit-transform: translate(0, 10px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes fade_move_down {
+    0% {
+      -moz-transform: translate(0, -10px) rotate(45deg);
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      -moz-transform: translate(0, 10px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade_move_down {
+    0% {
+      transform: translate(0, -10px) rotate(45deg);
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translate(0, 10px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  
+  //   heart beat animation  css
+  
+  @keyframes beat {
+  
+    0%,
+    50%,
+    100% {
+      transform: scale(1, 1);
+    }
+  
+    30%,
+    80% {
+      transform: scale(0.92, 0.95);
+    }
+  }
+  
+  // about page animation
+  
+  /* keyframe animation */
+  
+  @keyframes Rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes Rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes Rotate-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+  
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @-webkit-keyframes Rotate-reverse {
+    from {
+      -webkit-transform: rotate(360deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes circle-rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    to {
+      transform: translate(-50%, -50%) rotate(405deg);
+    }
+  }
+  
+  @-webkit-keyframes circle-rotate {
+    from {
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    to {
+      -webkit-transform: translate(-50%, -50%) rotate(405deg);
+    }
+  }
+  
+  @keyframes img-rotate {
+    from {
+      transform: rotate(-45deg);
+    }
+  
+    to {
+      transform: rotate(-405deg);
+    }
+  }
+  
+  @-webkit-keyframes img-rotate {
+    from {
+      -webkit-transform: rotate(-45deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(-405deg);
+    }
+  }
+  
+  
+  @keyframes bounce {
+  
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+  
+  
+  /* img Circle hover css*/
+  .img_circle_effect {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .img_circle_effect::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  
+  .img_circle_effect:hover::before {
+    -webkit-animation: circle .75s;
+    animation: circle .75s;
+  }
+  
+  @-webkit-keyframes circle {
+    0% {
+      opacity: 1;
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    100% {
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circle {
+    0% {
+      opacity: 1;
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    100% {
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+    }
+  }
+  
+  //  wishlist btn animation 
+  
+  @keyframes beat {
+  
+    30% {
+      opacity: 1;
+      transform: scale(1.4);
+    }
+  
+    50% {
+      transform: scale(0.8);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  //  image zoom effect css
+  
+  .zoom_img_effect {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .zoom_img_effect img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  
+  .zoom_img_effect:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  //  image  over  effect (shine)
+.shine-effect {
+    position: relative;
+  }
+  
+  .shine-effect {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+  }
+  
+  .shine-effect::after {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+  
+  .shine-effect:hover::after {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+  }
+  
+  @-webkit-keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }

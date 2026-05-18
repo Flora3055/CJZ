@@ -1,0 +1,129 @@
+/*-------------------------------------
+    
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+    Copyright: © 2025-26
+	
+-----------------------------------------
+
+
+    CSS INDEX
+    ===================
+
+
+---------------------------------------*/
+
+/* ....................................
+1. typography CSS 
+.......................................*/
+
+@import 'typography/variable';
+@import 'typography/animation';
+
+/* ....................................
+2. Font CSS 
+.......................................*/
+
+@import 'font/font';
+
+/* ....................................
+3. Common CSS 
+.......................................*/
+
+@import 'common/common';
+
+/* ....................................
+4. components CSS 
+.......................................*/
+@import 'components/banner';
+@import 'components/banner-02';
+@import 'components/banner-03';
+@import 'components/banner-04';
+@import 'components/cart';
+@import 'components/imgSlider';
+@import 'components/sidebar';
+@import 'components/summer';
+@import 'components/trandingProduct';
+@import 'components/deals';
+@import 'components/newArrival';
+@import 'components/expert';
+@import 'components/clientReviews';
+@import 'components/blog';
+@import 'components/patners';
+@import 'components/count';
+@import 'components/collection';
+@import 'components/marquee';
+@import 'components/searchPage';
+@import 'components/shop-category';
+@import 'components/ads';
+@import 'components/casual';
+@import 'components/testimonails';
+@import 'components/testimonails-04';
+@import 'components/featured-collection';
+@import 'components/best-style';
+@import 'components/denim-sports';
+@import 'components/our-teams';
+@import 'components/customer-review';
+@import 'components/wear-style';
+@import 'components/dress-collection';
+@import 'components/cosmetics-items';
+@import 'components/our-best-team';
+@import 'components/new-arrival-04';
+@import 'components/shop-by-category';
+@import 'components/beauty-product';
+@import 'components/pagination';
+@import 'components/about_blog_sidebar';
+
+
+/* ....................................
+5. Header CSS 
+.......................................*/
+
+@import 'header/header';
+@import 'header/header_02';
+@import 'header/header-04';
+@import 'header/header_05';
+
+/* ....................................
+6. Sidebar CSS 
+.......................................*/
+
+@import 'sidebar/sidebar';
+
+/* ....................................
+7. pages CSS 
+.......................................*/
+
+@import 'pages/about-us';
+@import 'pages/bread-crumb';
+@import 'pages/shop-sidebar-02';
+@import 'pages/shop-sidebar-list-view';
+@import 'pages/shop-metro';
+@import 'pages/cart';
+@import 'pages/checkout';
+@import 'pages/our_blog_02_column';
+@import 'pages/our_blog_01_col_with_sidebar';
+@import 'pages/our_blog_02_col_with_sidebar';
+@import 'pages/blog_single_image_with_sidebar';
+@import 'pages/blog_single_slider_with_sidebar';
+@import 'pages/blog_single_video_with_sidebar';
+@import 'pages/shop_single';
+@import 'pages/shop_single_02';
+@import 'pages/shop_single_03';
+@import 'pages/contact_us';
+@import 'pages/faq';
+@import 'pages/terms_&_conditions';
+@import 'pages/login_register';
+@import 'pages/error_404';
+@import 'pages/coming_soon';
+@import 'pages/wishlist';
+@import 'pages/search_result';
+
+/* ....................................
+8. footer CSS 
+.......................................*/
+
+@import 'footer/footer_01';
+@import 'footer/footer_02';
+@import 'footer/footer_04';

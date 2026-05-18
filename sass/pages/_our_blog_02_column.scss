@@ -1,0 +1,46 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Our Blog 02 column Section css
+  02. Responsive css
+
+**********************************************/
+
+.our_blog_02_column_section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: 100px 0px 100px 0px;
+
+
+    .our_blog_02_column_main_box {
+        width: 100%;
+        position: relative;
+
+        .row {
+            row-gap: 30px;
+        }
+
+        .latestNewsCardInner {
+            .latestNewsCardInnerContent {
+                .commonHeading {
+                    h5 {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width:991px) {
+    .our_blog_02_column_section {
+        padding: 50px 0px 50px 0px;
+    }
+}

@@ -1,0 +1,326 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Shop By category Section css
+  02. Responsive css
+
+**********************************************/
+
+.shopByCategorySec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: 100px 0px 200px 0px;
+
+    .shopByCategoryWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+
+        .titleBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .shopByCategoryMainBox {
+        width: var(--width100);
+        height: 100%;
+        margin-top: var(--m60);
+
+        .shopByCategoryInfoBox {
+            width: var(--width100);
+            height: 100%;
+            position: relative;
+
+            .shopByCategoryList {
+                width: var(--width100);
+                position: relative;
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+
+                    li {
+                        .shopListBox {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+
+
+                            .textBox {
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 20px;
+                                    font-family: 'Kalnia';
+                                    font-weight: var(--fw500);
+                                    font-size: var(--fs30);
+                                    color: var(--chocolate);
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .shopByCategoryMainWrap {
+                width: 100%;
+                position: relative;
+                margin-top: 60px;
+
+                .shopByCategoryInnerBox {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 30px 95px;
+                    border-radius: 10px;
+                    position: relative;
+                    z-index: 22;
+
+                    .shopByCategoryTextBox {
+                        h2 {
+                            font-family: 'Kalnia';
+                            font-weight: var(--fw500);
+                            font-size: var(--fs80);
+                            color: var(--chocolate);
+
+                            span {
+                                color: var(--dark01);
+                            }
+                        }
+                    }
+                }
+
+                .shopByCategorySliderBox {
+                    width: var(--width100);
+                    height: 100%;
+                    position: relative;
+                    position: relative;
+                    z-index: 22;
+
+                    .product-card {
+                        width: var(--width100);
+                        box-shadow: 0px 4px 20px 0px #0000001A;
+                        background-color: var(--white);
+                        border-radius: var(--br6);
+
+                        .offerBox {
+                            width: 80px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+                            background: var(--sky);
+                            color: var(--white);
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            z-index: 1;
+                        }
+
+                        .img-container {
+                            position: relative;
+                            text-align: center;
+                            // padding: var(--p16) var(--p16) var(--p60) var(--p16);
+                            padding: 20px 20px 80px 20px;
+
+                            img {
+                                width: 100%;
+                                // max-width: 380px;
+                                // height: 300px;
+                                margin: 0 auto;
+                            }
+
+
+
+                            .icon_item_box {
+                                position: absolute;
+                                top: 15px;
+                                right: -40px;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 5px;
+                                transition: all 0.5s;
+                                overflow: hidden;
+                                opacity: 0;
+                                z-index: 99999;
+                                padding: var(--p10);
+
+                                li {
+                                    .btn {
+                                        width: 40px;
+                                        height: 40px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        box-shadow: 0px 4px 12px 0px #00000014;
+                                        border: none;
+                                        background-color: var(--white);
+                                        border-radius: 50px;
+                                    }
+                                }
+                            }
+
+                            .addBtn {
+                                height: 54px;
+                                position: absolute;
+                                bottom: -30px;
+                                left: 15px;
+                                right: 15px;
+                                transition: all 0.5s;
+                                overflow: hidden;
+                                opacity: 0;
+                                z-index: 99999;
+
+                                a {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .icon_item_box {
+                                right: 5px;
+                                opacity: 1;
+                            }
+
+                            .addBtn {
+                                bottom: 15px;
+                                opacity: 1;
+                            }
+                        }
+
+                        .details {
+                            width: var(--width100);
+                            padding: var(--p10) var(--p20) var(--p26) var(--p20);
+
+                            .rating-box {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: var(--m6);
+
+                                .rating {
+                                    a {
+                                        font-weight: var(--fw400);
+                                        font-size: var(--fs20);
+                                        color: var(--text-black);
+                                        display: flex;
+                                        align-items: center;
+
+                                    }
+                                }
+                            }
+
+                            .titleBox {
+                                h4 {
+                                    margin-bottom: var(--m6);
+                                }
+                            }
+
+                            p {
+                                font-weight: var(--fw500);
+                                font-size: var(--fs36);
+                                color: var(--text-black);
+
+                                del {
+                                    color: var(--dark01);
+                                }
+                            }
+
+
+                        }
+                    }
+
+                    .owl-stage {
+                        height: 100%;
+                        display: flex;
+
+                        .item {
+                            height: 100%;
+                            display: flex;
+                        }
+                    }
+                }
+
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    max-width: 1281px;
+                    height: 790px;
+                    border-radius: 10px;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background-color: var(--dark02);
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+
+.container2 {
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+
+
+    ul {
+        display: flex;
+        position: relative;
+        gap: 25px;
+
+        li {
+            font-family: 'Kalnia';
+            font-weight: var(--fw500);
+            font-size: var(--fs26);
+            color: var(--chocolate);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+
+
+
+        }
+    }
+
+}
+
+
+// responsive css start 
+
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}

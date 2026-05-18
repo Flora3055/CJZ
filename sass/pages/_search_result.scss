@@ -1,0 +1,75 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Search Section css
+  02. Responsive css
+
+**********************************************/
+
+.search-header {
+    width: 100%;
+    background-color: var(--sand);
+    padding: var(--p60) var(--p0);
+
+    h2 {
+        font-family: "Kalnia";
+        font-size: var(--fs30);
+        font-weight: var(--fw600);
+        color: var(--chocolate);
+        margin-bottom: var(--m10);
+        text-align: start;
+    }
+
+    p {
+        font-family: "Lato";
+        font-size: var(--fs18);
+        font-weight: var(--fw400);
+        color: var(--chocolate);
+        margin-bottom: var(--m20);
+    }
+
+    .search-bar {
+        display: flex;
+        max-width: 500px;
+
+        input {
+            width: var(--width100);
+            padding: 14px;
+            border: none;
+            outline: none;
+            background: var(--white);
+            color: var(--dark01);
+        }
+
+        button {
+            padding: 14px 22px;
+            border: none;
+            background: var(--chocolate);
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width:600px) {
+    .search-header h2 {
+        font-size: var(--fs26);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

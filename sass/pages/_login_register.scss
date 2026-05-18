@@ -1,0 +1,210 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01.  login Register Section css
+  02. Responsive css
+
+**********************************************/
+
+
+.loginRegister {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    overflow: hidden;
+
+    .loginRegisterInner {
+        .loginRegisterForm {
+            .commonHeading {
+                margin-bottom: var(--m30)
+            }
+
+            .loginRegisterFormGroup {
+
+                .loginIconsBox {
+                    margin-top: var(--m30);
+
+                    .line_box {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 35px;
+
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            height: 2px;
+                            background-color: #e4e4e4;
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 2px;
+                            background-color: #e4e4e4;
+                        }
+
+                        .lineText {
+                            width: 100%;
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--text-black);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        gap: 20px;
+                        justify-content: center;
+                        align-items: center;
+
+                        li {
+                            a {
+                                width: 40px;
+                                height: 40px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: 1px solid var(--chocolate);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+form {
+    position: relative;
+    z-index: 2;
+
+    .formGroup {
+        margin-bottom: var(--m20);
+
+        label {
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs20);
+            color: var(--dark01);
+            margin-bottom: var(--m10);
+        }
+
+        .passwordWrapper {
+            position: relative;
+
+            input {
+                padding: 18px 50px 18px 30px;
+            }
+
+            img {
+                display: inline-flex;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: unset;
+                right: 25px;
+                cursor: pointer;
+            }
+        }
+
+
+        input,
+        textarea {
+            width: var(--width100);
+            height: 60px;
+            border: none;
+            background-color: var(--sand);
+            box-shadow: none;
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs20);
+            color: var(--dark01);
+
+
+            &:focus {
+                border: none;
+                background-color: var(--sand);
+            }
+        }
+    }
+
+    .dontAccount {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        p {
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--dark01);
+
+            a {
+                color: var(--chocolate);
+            }
+        }
+    }
+
+    .LoginBtn {
+        margin-top: var(--m60);
+        width: var(--width100);
+
+        .btnOne {
+            width: var(--width100);
+        }
+    }
+
+    .switchAccount {
+        margin-top: var(--m16);
+
+        p {
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--dark01);
+
+            a {
+                color: var(--chocolate);
+            }
+        }
+    }
+
+    .textBox {
+        a {
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--chocolate);
+
+        }
+    }
+}
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .loginRegister {
+        padding: var(--p50) var(--p0);
+    }
+
+    .loginRegister .loginRegisterInner .row {
+        row-gap: 50px;
+    }
+
+    .loginRegister .loginRegisterInner .loginRegisterContent .loginRegisterImages img {
+        width: var(--width100);
+    }
+}

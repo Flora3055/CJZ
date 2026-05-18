@@ -1,0 +1,91 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Shop Single 03 Section css
+  02. Responsive css
+
+**********************************************/
+
+.shopSidebarFilterBox {
+    background-color: var(--sand);
+}
+
+.shopSidebarFilterBox .crossBtnBox .close-btn {
+    display: none;
+}
+
+.shopSingle_03_Sec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+}
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .shopSingle_03_Sec {
+        padding: var(--p30) var(--p0) var(--p0) var(--p0);
+    }
+
+    .relatedSearchSec {
+        padding: var(--p0) var(--p0) var(--p100) var(--p0);
+    }
+
+    // left side bar toggle functionlity css start
+
+    .leftsidebar_toggle_btn {
+        display: flex;
+        border: none;
+        background: transparent;
+    }
+
+    #LeftSidebarBox {
+        position: fixed;
+        top: 0px;
+        left: -360px;
+        /* hidden outside screen */
+        width: 360px;
+        height: 100%;
+        padding-bottom: 120px;
+        transition: left 0.3s ease;
+        z-index: 9999;
+    }
+
+    /* Sidebar visible */
+    #LeftSidebarBox.active {
+        left: 0;
+    }
+
+    #LeftSidebarBox .close-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        z-index: 9;
+        border: navajowhite;
+        background: transparent;
+        font-size: 26px;
+        display: inline-flex;
+        color: #000;
+    }
+
+    #LeftSidebarBox.active {
+        left: 0;
+    }
+
+    .shopSidebarSec .shopSidebarInner .shopSidebarFilterBox {
+        left: 0;
+    }
+}
+
+
+@media(max-width:400px) {
+    #LeftSidebarBox {
+        left: -280px;
+        width: 280px;
+    }
+}

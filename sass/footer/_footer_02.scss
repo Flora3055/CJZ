@@ -1,0 +1,357 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Footer-02 Section css
+  02. Responsive css
+
+**********************************************/
+
+//  footer  wrapper  css  start  //
+
+footer {
+  .footerSecWrapperTwo {
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    padding: 100px 0px 50px 0px;
+
+    .footerNewsletter {
+      width: 100%;
+      height: 100%;
+      background-color: var(--dark02);
+      padding: 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footerNewslettertextBox {
+        width: 50%;
+
+        .titleBox {
+          h2 {
+            margin: 0;
+          }
+        }
+      }
+
+      .footerNewsletterFormBox {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+
+        form {
+          width: 100%;
+
+          input {
+            border: 1px solid var(--white);
+            padding: 12px 0px 12px 20px;
+            width: 100%;
+            // max-width: 444px;
+            outline: none;
+            background-color: var(--white);
+            font-family: "lato";
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-black);
+
+            &::placeholder {
+              color: var(--text-black);
+            }
+          }
+        }
+
+        // .footerNewsletterbtn {
+        //   a {
+        //     width: 200px;
+        //     height: 50px;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     font-family: "Kalnia";
+        //     color: var(--text-black);
+        //     font-size: var(--fs16);
+        //     font-weight: var(--fw500);
+        //     background-color: var(--chocolate);
+        //     color: var(--white);
+        //     border: 1px solid transparent;
+        //     transition: all 0.5s;
+
+        //     &:hover {
+        //       color: var(--chocolate);
+        //       background-color: transparent;
+        //       border-color: var(--chocolate);
+        //     }
+        //   }
+        // }
+      }
+    }
+
+    .middleFooter {
+      padding-bottom: 47px;
+      // margin-top: 60px;
+
+      .info_box {
+        position: relative;
+
+        .logo_box {
+          width: 100%;
+        }
+
+        .white_title {
+          font-family: "lato";
+          font-weight: 500;
+          font-size: 22px;
+          color: white;
+          margin-bottom: 23px;
+        }
+
+        p {
+          max-width: 317px;
+          font-weight: var(--fw400);
+          font-size: var(--fs16);
+          color: var(--white);
+
+          margin-top: 21px;
+        }
+
+        .footerSocialIcon {
+          margin-top: 40px;
+
+          ul {
+            display: flex;
+            gap: 20px;
+
+            li {
+              transition: all 0.5s;
+
+              a {
+                transition: all 0.5s;
+
+                svg {
+                  transition: all 0.5s;
+                }
+
+                &:hover {
+                  svg {
+                    path {
+                      fill: var(--dark03);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+
+        .info_ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          li {
+            a {
+              i {
+                font-size: 8px;
+              }
+
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              font-family: "lato";
+              font-weight: var(--fw400);
+              font-size: var(--fs16);
+              color: white;
+              transition: 0.5s;
+            }
+
+            &:hover {
+              a {
+                color: var(--dark03);
+              }
+            }
+          }
+        }
+
+        .footerNewletterSec {
+          width: 100%;
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          #subscribeForm {
+            .footerSubscribe {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+
+              input {
+                width: 100%;
+              }
+
+              .btnOne {
+                width: 100%;
+              }
+            }
+          }
+
+
+        }
+      }
+
+      .info2_box {
+        position: relative;
+
+        .info_ul {
+          margin-top: 20px;
+
+          li {
+            display: flex;
+            gap: 21px;
+            align-items: center;
+
+            .svgIcon {
+              a {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--white);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      border-top: 1px solid #FFFFFF;
+      padding-top: 30px;
+
+      .footerInnerBox {
+        width: 100%;
+
+        p {
+          font-size: var(--fs16);
+          font-weight: var(--fw400);
+          color: var(--white);
+
+          a {
+            font-weight: var(--fw700);
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive css start 
+
+@media (max-width: 1299px) {
+  footer {
+    .footerSecWrapperTwo {
+      .footerNewsletter {
+        .footerNewslettertextBox {
+          h3 {
+            a {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer .footerSecWrapperTwo {
+    padding: 0px 0px 50px 0px;
+  }
+}
+
+@media (max-width: 1199px) {
+  footer {
+    .footerSecWrapperTwo {
+      .footerNewsletter {
+        flex-wrap: wrap;
+
+        .footerNewslettertextBox {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 50px;
+        }
+
+        .footerNewsletterFormBox {
+          width: 100%;
+        }
+      }
+
+      .middleFooter {
+        .info_box {
+          position: relative;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  footer .footerSecWrapperTwo .bottomFooter .footerInnerBox p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    .footerSecWrapperTwo {
+      .footerNewsletter {
+        padding: 20px;
+
+        .footerNewslettertextBox {
+          .titleBox {
+            h2 {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .footerNewsletterFormBox {
+          flex-wrap: wrap;
+          gap: 30px;
+
+          .footerNewsletterbtn {
+            width: 100%;
+
+            a {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .footerTwo {
+    .footerSecWrapperTwo {
+      .bottomFooter {
+        .footerInnerBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Count Section css
+  02. Responsive css
+
+**********************************************/
+
+.countDwonSec {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  background-color: var(--sand);
+  margin-top: 50px;
+
+  .countDwonWrapper {
+    width: var(--width100);
+    display: flex;
+    gap: 30px;
+
+    .countDwonInnerBoxOne {
+      width: 40%;
+    }
+
+    .countDwonInnerBoxTwo {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .countDwonTextBox {
+        width: var(--width100);
+        position: relative;
+
+        .titleBox {
+          position: relative;
+
+          h4 {
+            margin-bottom: 15px;
+          }
+
+          h2 {
+            margin-bottom: 15px;
+          }
+
+          p {
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--text-black);
+            margin-bottom: 30px;
+          }
+        }
+
+        .countdownInfoBox {
+          .countdown {
+            ul {
+              display: flex;
+              gap: 30px;
+
+              li {
+                width: 180px;
+                height: 140px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #EFDED0;
+                font-family: 'lato';
+                font-weight: var(--fw400);
+                font-size: var(--fs20);
+                color: var(--text-black);
+
+
+                span {
+                  font-family: 'Kalnia';
+                  font-weight: var(--fw500);
+                  font-size: var(--fs48);
+                  color: var(--chocolate);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .shopNowbutton {
+      margin-top: var(--m50);
+    }
+  }
+}
+
+// responsive css start 
+
+
+@media (max-width: 991px) {
+  .countDwonSec {
+    .countDwonWrapper {
+      flex-wrap: wrap;
+
+      .countDwonInnerBoxOne {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .countDwonInnerBoxTwo {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .titleBox h4 {
+    text-align: center;
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .titleBox h2 {
+    text-align: center;
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .titleBox p {
+    text-align: center;
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .countdownInfoBox .countdown ul li {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .countDwonSec {
+    .countDwonWrapper {
+      .countDwonInnerBoxOne {
+        .imgBox {
+          img {
+            width: 350px;
+          }
+        }
+      }
+
+      .countDwonInnerBoxTwo {
+        .countDwonTextBox {
+          #countdown {
+            .countdown-blocks {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .countdownInfoBox .countdown ul li span {
+    font-size: var(--fs24);
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .countdownInfoBox .countdown ul li {
+    font-size: var(--fs16);
+    width: 80px;
+    height: 80px;
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .countdownInfoBox .countdown ul {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .countDwonSec {
+    .countDwonWrapper {
+      .countDwonInnerBoxTwo {
+        .countDwonTextBox {
+          #countdown {
+            .countdown-blocks {
+              grid-template-columns: repeat(1, 1fr);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .countDwonSec .countDwonWrapper .countDwonInnerBoxTwo .countDwonTextBox .countdownInfoBox .countdown ul li {
+    font-size: var(--fs12);
+    width: 60px;
+    height: 60px;
+  }
+}

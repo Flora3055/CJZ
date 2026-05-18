@@ -1,0 +1,117 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Cosmetics Section css
+  02. Responsive css
+
+**********************************************/
+
+.cosmeticsItemSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) 0px;
+
+    .cosmeticsWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+
+    }
+}
+
+.cosmeticsInfoBox {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    display: flex;
+    gap: 30px;
+
+    .cosmeticsCardBox {
+        width: 33%;
+        height: 500px;
+        background-image: url('../images/home_04/cosmetics-item-01.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+
+        .cardTextBox {
+            .titleBox {
+                h4 {
+                    text-decoration: underline;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .commonHeading {
+                h6 {
+                    text-align: center;
+                    color: var(--text-black);
+                }
+            }
+        }
+
+        .cardBtnBox {
+            .btnOne {
+                background-color: var(--white);
+                color: var(--chocolate);
+
+                &:hover {
+                    background-color: var(--chocolate);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    .cosmeticsCardBoxOne {
+        background-image: url('../images/home_04/cosmetics-item-01.png');
+        background-repeat: no-repeat;
+    }
+
+    .cosmeticsCardBoxOne {
+        background-image: url('../images/home_04/cosmetics-item-02.png');
+        background-repeat: no-repeat;
+    }
+
+    .cosmeticsCardBoxThree {
+        background-image: url('../images/home_04/cosmetics-item-03.png');
+        background-repeat: no-repeat;
+    }
+}
+
+// resposive css start 
+
+
+@media(max-width:991px) {
+    .cosmeticsInfoBox {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .cosmeticsCardBox {
+            width: 48%;
+        }
+    }
+
+    .cosmeticsItemSec {
+        padding: var(--p50) 0px;
+    }
+}
+
+
+@media(max-width:774px) {
+    .cosmeticsInfoBox {
+        .cosmeticsCardBox {
+            width: 100%;
+        }
+    }
+}

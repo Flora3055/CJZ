@@ -1,0 +1,150 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Blog single vedio with sideebar Section css
+  02. Responsive css
+
+**********************************************/
+
+.athenaFashionBlogGroup {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .athenaFashionBlogGroupInner {
+        .athenaFashionBlogGroupItem {
+            .blogSingleVideoWithSideBarBox {
+                margin-bottom: var(--m30);
+
+                p {
+                    font-family: 'lato';
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    color: var(--chocolate);
+                    background-color: var(--dark02);
+                    padding: 44px 65px;
+                    border-left: 10px solid var(--chocolate);
+                }
+            }
+
+            .tipsForFutureWrapper {
+
+                .tipsForFutureInfoBox {
+                    width: var(--width100);
+                    display: flex;
+                    gap: 30px;
+                    margin-bottom: var(--m16);
+
+                    .tipsForFutureContentBox {
+                        width: var(--width50);
+
+                        .commonHeading {
+                            h5 {
+                                color: var(--text-black);
+                                margin-bottom: var(--m16);
+                            }
+                        }
+
+                        .tipsForFutureGroup {
+                            width: 100%;
+
+                            .tipsForFutureListBox {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+                                margin-left: var(--m20);
+
+                                li {
+                                    list-style: disc;
+                                    font-family: "lato";
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs16);
+                                    color: var(--dark01);
+                                }
+                            }
+                        }
+                    }
+
+                    .tipsForFutureImgBox {
+                        width: var(--width50);
+
+                        img {
+                            width: var(--width100);
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .tipsForFutureBlogImgBox {
+                    width: var(--width100);
+                    margin-bottom: var(--m30);
+
+                    img {
+                        width: var(--width100);
+                    }
+                }
+            }
+
+            .blogNxtPrevPage {
+                width: var(--width100);
+                border-bottom: 1px solid var(--dark01);
+                padding-bottom: var(--p30);
+                margin-bottom: var(--m30);
+
+                .blogNxtPrevPageInner {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .blogPrevPage {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--text-black);
+
+                            span {
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid var(--dark01);
+                            }
+                        }
+                    }
+
+                    .blogNxtPage {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+
+                            span {
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid var(--dark01);
+                            }
+                        }
+
+                        .disabled {
+                            span {
+                                background-color: var(--chocolate);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

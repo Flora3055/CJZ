@@ -1,0 +1,141 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Wear Style Section css
+  02. Responsive css
+
+**********************************************/
+
+.wearStyleSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) 0px;
+
+    .wearStyleWrapper {
+        width: var(--width100);
+        display: flex;
+        gap: 30px;
+
+        .wearStyleInnerBox {
+            width: var(--width50);
+
+            .wearStyleImgBox {
+                width: var(--width100);
+                height: 100%;
+
+                img {
+                    width: var(--width100);
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .wearStyleContentBox {
+                width: var(--width100);
+
+                .titleBox {
+                    h6 {
+                        font-weight: var(--fw400);
+                        font-size: var(--fs20);
+                        color: var(--dark01);
+                        margin-bottom: var(--m10);
+                    }
+
+                    .tilteTwo {
+                        margin-bottom: var(--m30);
+
+                        .textBox {
+                            p {
+                                font-weight: var(--fw400);
+                                font-size: var(--fs16);
+                                color: var(--dark01);
+                                margin-top: var(--m20);
+                                margin-bottom: var(--m40);
+                            }
+                        }
+                    }
+                }
+
+                .imgInfoBox {
+                    display: flex;
+                    gap: 30px;
+
+                    .imgBox {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// responsive css start 
+
+@media(max-width:1299px) {
+    .wearStyleSec {
+        .wearStyleWrapper {
+            .wearStyleInnerBox {
+                .wearStyleContentBox {
+                    .titleBox {
+                        .tilteTwo {
+                            .textBox {
+                                h2 {
+                                    font-size: var(--fs32);
+                                }
+
+                                p {
+                                    margin-bottom: var(--m20);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:991px) {
+.wearStyleSec {
+	.wearStyleWrapper {
+		.wearStyleInnerBox {
+			.wearStyleContentBox {
+				.titleBox {
+					.tilteTwo {
+						.textBox {
+							h2 {
+								font-size: var(--fs26);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+
+@media(max-width:767px) {
+.wearStyleSec {
+     padding: var(--p50) var(--p0) var(--p0) var(--p0);
+	.wearStyleWrapper {
+		flex-wrap: wrap;
+
+        .wearStyleInnerBox{
+            width: var(--width100);
+        }
+	}
+}
+}

@@ -1,0 +1,55 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Marquee Section css
+  02. Responsive css
+
+**********************************************/
+
+.marquee_container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #704f38;
+  border: 5px solid #e39f6c;
+}
+.marquee {
+  animation: marquee 10s linear infinite;
+
+  ul {
+    display: flex;
+    gap: 50px;
+    li {
+      font-family: "Kalnia";
+      font-weight: var(--fw500);
+      font-size: var(--fs48);
+      color: var(--white);
+      padding: 15px;
+      list-style: disc;
+    }
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+
+// responsive css start 
+
+@media (max-width: 1399px) {
+  .marquee {
+    ul {
+      li {
+        font-size: 22px;
+      }
+    }
+  }
+}

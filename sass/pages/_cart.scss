@@ -1,0 +1,424 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. cart Section css
+  02. Shop Single Form css
+  03. Responsive css
+
+**********************************************/
+
+.cartSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .wishlist_section_wrapper {
+        width: 100%;
+        height: 100%;
+        background-color: var(--white);
+        position: relative;
+
+        .wishlist_main_box {
+            width: 100%;
+            position: relative;
+
+            .inner_table_box {
+                width: 100%;
+                position: relative;
+
+                .table_box {
+                    width: 100%;
+                    position: relative;
+
+                    thead {
+                        width: 100%;
+
+
+                        tr {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 45px;
+                            border-bottom: 1px solid #949494;
+
+                            th {
+                                text-align: center;
+                                font-family: 'Kalnia';
+                                font-weight: var(--fw500);
+                                font-size: var(--fs26);
+                                color: var(--chocolate);
+
+                            }
+
+                            .th-box1 {
+                                width: 40%
+                            }
+
+                            .th-box2 {
+                                width: 20%
+                            }
+                        }
+                    }
+
+                    tbody {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+
+                        .table_content_row {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            border-bottom: 1px solid #949494;
+                            padding-bottom: 30px;
+
+                            td {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: var(--text-black);
+                                font-weight: var(--fw500);
+                                font-size: var(--fs30);
+
+                            }
+
+                            .td-box1 {
+                                width: 40%;
+                            }
+
+                            .td-box2 {
+                                width: 20%;
+                            }
+
+                            .whislist_product_box {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                gap: 15px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .appleCouponSec {
+                width: var(--width100);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
+
+                .couponBtn {
+                    display: flex;
+                    gap: 30px;
+
+                    .couponCode {
+                        input {
+                            font-family: 'Kalnia';
+                            font-weight: var(--fw500);
+                            font-size: var(--fs16);
+                            padding: 12px 12px;
+                            border: 1px solid var(--dark01);
+                            color: var(--dark01);
+                            transition: all 0.5s;
+                            outline: none;
+                            background-color: var(--white);
+                        }
+                    }
+                }
+            }
+
+            .cartTotalBox {
+                width: var(--width100);
+                margin-top: 100px;
+
+
+
+                .shippingSec {
+                    margin-top: 30px;
+
+                    ul {
+                        .subHeading {
+                            display: flex;
+                            gap: 397px;
+                            align-items: center;
+                            border-bottom: 1px solid #949494;
+                            padding-bottom: 20px;
+                            padding-top: 20px;
+
+                            .titleBox {
+                                // width: 30%;
+                            }
+
+                            .amountBox {
+                                // width: 70%;
+
+                                ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 15px;
+
+                                    li {}
+                                }
+
+                                p {
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs20);
+                                    color: var(--text-black);
+
+
+                                }
+
+                                .bold {
+                                    font-weight: var(--fw500);
+                                    font-size: var(--fs30);
+                                    margin-left: 50px;
+                                }
+                            }
+
+                            .shipping-options {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+
+                                label {
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs20);
+                                    color: var(--dark01);
+
+                                }
+
+                                p {
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs20);
+                                    color: var(--dark01);
+
+                                    strong {
+                                        color: var(--text-black);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .checkout-btn {
+                    margin-top: 50px;
+                }
+            }
+
+        }
+    }
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: var(--chocolate);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+// count  css start 
+.shope_single_form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+        border: 1px solid var(--chocolate);
+        outline: none;
+        width: 36px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        color: var(--text-black);
+    }
+
+    .number {
+        font-weight: var(--fw400);
+        font-size: var(--fs20);
+        color: var(--white);
+        background-color: var(--chocolate);
+        width: 36px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .inner_table_box .table_box {
+        position: relative;
+        overflow-x: scroll;
+        width: 900px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .inner_table_box .table_box tbody .table_content_row .whislist_product_box .icon_box img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .inner_table_box .table_box tbody {
+        gap: 20px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul li {
+        gap: 70px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul .subHeading {
+        gap: 100px;
+    }
+}
+
+
+@media(max-width:767px) {
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .cartSec {
+        padding: var(--p50) var(--p0);
+    }
+}
+
+@media(max-width:600px) {
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .couponBtn .couponCode {
+        width: 100%;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .couponBtn .couponCode input {
+        width: 100%;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .couponBtn .applyCode {
+        width: 100%;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .couponBtn .applyCode .btnOne {
+        width: 150px;
+        font-size: var(--fs12);
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .updateBtn {
+        width: 100%;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .updateBtn .btnOne {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:500px) {
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .couponBtn {
+        gap: 10px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .couponBtn .couponCode a {
+        font-size: var(--fs12);
+        padding: 12px 12px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .couponBtn .applyCode a {
+        font-size: var(--fs12);
+        padding: 12px 12px;
+        ;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .appleCouponSec .updateBtn a {
+        font-size: var(--fs12);
+        padding: 12px 12px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul li {
+        gap: 20px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul .subHeading {
+        gap: 20px;
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul li .shipping-options label {
+        font-size: var(--fs16);
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul li .shipping-options p {
+        font-size: var(--fs16);
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul li .amountBox p {
+        font-size: var(--fs16);
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul li .titleBox .commonHeading h5 {
+        font-size: var(--fs20);
+    }
+
+    .cartSec .wishlist_section_wrapper .wishlist_main_box .cartTotalBox .shippingSec ul li .amountBox .bold {
+        font-size: var(--fs22);
+    }
+}

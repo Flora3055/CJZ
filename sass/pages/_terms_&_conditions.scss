@@ -1,0 +1,81 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. terms & condition Section css
+  02. Responsive css
+
+**********************************************/
+
+.termsSection {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .termsInfoBox {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .termsInnerBox {
+            .commonHeading {
+                h5 {
+                    color: var(--text-black);
+                    margin-bottom: var(--m30);
+                }
+            }
+
+            .paraBox {
+                p {
+                    font-family: 'lato';
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    color: var(--dark01);
+                    margin-bottom: var(--m30);
+                }
+
+                .paraListBox {
+                    margin-left: var(--m20);
+                    margin-bottom: var(--m16);
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        li {
+                            list-style: auto;
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .termsInnerBox2 {
+        border-bottom: 1px solid var(--dark01);
+    }
+}
+
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .termsSection {
+        padding: var(--p50) var(--p0);
+    }
+}
+
+@media(max-width:500px) {
+    .termsSection .termsInfoBox .termsInnerBox .commonHeading h5 {
+        font-size: var(--fs20);
+        margin-bottom: var(--m20);
+    }
+}

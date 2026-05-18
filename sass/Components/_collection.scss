@@ -1,0 +1,217 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. collections Section css
+  02. Responsive css
+
+**********************************************/
+
+.collectionSec {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: var(--p100) 0px;
+  background-color: var(--sand);
+
+  .collectionWrapper {
+    width: var(--width100);
+    position: relative;
+    display: flex;
+    gap: 30px;
+
+    .collectionInfoBoxOne {
+      width: 33%;
+      display: flex;
+
+      flex-direction: column;
+      gap: 30px;
+
+      .imgBox {
+        width: var(--width100);
+        height: 100%;
+
+        img {
+          width: var(--width100);
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .textBox {
+        width: 100%;
+        height: 100%;
+        background: url("../images/collectionTextBg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 86px 44px;
+        background-size: cover;
+
+        .titleBox {
+          h4 {
+            text-align: center;
+            color: var(--text-black);
+            margin-bottom: 50px;
+
+            span {
+              color: var(--chocolate);
+            }
+          }
+        }
+
+        .exploreBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // a {
+          //   width: 200px;
+          //   height: 50px;
+          //   display: flex;
+          //   justify-content: center;
+          //   align-items: center;
+          //   border: 1px solid transparent;
+          //   font-family: "Kalnia";
+          //   font-weight: var(--fw500);
+          //   font-size: var(--fs16);
+          //   background-color: var(--chocolate);
+          //   color: var(--white);
+          //    transition: all 0.5s;
+
+          //   &:hover{
+          //     background-color: transparent;
+          //     border-color: var(--chocolate);
+          //     color: var(--chocolate);
+          //   }
+          // }
+        }
+      }
+    }
+
+    .collectionInfoBoxTwo {
+      width: 33%;
+
+      .imgBox {
+        width: var(--width100);
+        height: 100%;
+
+        img {
+          width: var(--width100);
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .collectionInfoBoxThree {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .textBox {
+        width: 100%;
+        height: 100%;
+        background: url(../images/collectionTextBg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 62px 18px;
+        background-size: cover;
+
+        .titleBox {
+          h4 {
+            text-align: center;
+            margin-bottom: 50px;
+
+            span {
+              color: var(--chocolate);
+            }
+          }
+        }
+
+        p {
+          text-align: center;
+        }
+
+        .shopBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 40px;
+          //   a {
+          //     width: 200px;
+          //     height: 50px;
+          //     display: flex;
+          //     justify-content: center;
+          //     align-items: center;
+          //     border: 1px solid transparent;
+          //     font-family: "Kalnia";
+          //     font-weight: var(--fw500);
+          //     font-size: var(--fs16);
+          //     background-color: var(--chocolate);
+          //     color: var(--white);
+          //     transition: all 0.5s;
+
+          //     &:hover {
+          //       background-color: transparent;
+          //       border-color: var(--chocolate);
+          //       color: var(--chocolate);
+          //     }
+          //   }
+        }
+      }
+
+      .imgBox {
+        width: var(--width100);
+        height: 100%;
+
+        img {
+          width: var(--width100);
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+// responsive css start 
+
+@media (max-width: 991px) {
+  .collectionSec {
+    padding: var(--p30) var(--p0);
+
+    .collectionWrapper {
+      flex-wrap: wrap;
+
+      .collectionInfoBoxOne {
+        width: 100%;
+        flex-direction: row;
+      }
+
+      .collectionInfoBoxTwo {
+        width: 100%;
+      }
+
+      .collectionInfoBoxThree {
+        width: 100%;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .collectionSec {
+    .collectionWrapper {
+      .collectionInfoBoxOne {
+        flex-direction: column;
+      }
+
+      .collectionInfoBoxThree {
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Summer Section css
+  02. Responsive css
+
+**********************************************/
+
+.summerSec {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: var(--p100) 0px;
+  margin: var(--m50) 0px;
+  background-color: var(--sand);
+
+  .summerSecWrapper {
+    width: var(--width100);
+    position: relative;
+    display: flex;
+    gap: 30px;
+
+    .titleBox {
+      h4 {
+        margin-bottom: 30px;
+      }
+    }
+
+    .summerInnerBoxOne {
+      width: var(--width50);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .summerImgBox {
+        width: var(--width100);
+        position: relative;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        .imgBoxOne {
+          position: absolute;
+          right: 320px;
+          top: 50px;
+        }
+      }
+    }
+
+    .summerInnerBoxTwo {
+      width: var(--width50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .titleBox {
+        width: var(--width100);
+
+        p {
+          margin-bottom: var(--m60);
+        }
+      }
+    }
+  }
+}
+
+// responsive css      start 
+
+@media (max-width: 1399px) {
+  .summerSec {
+    .summerSecWrapper {
+      .summerInnerBoxOne {
+        .summerImgBox {
+          .imgBoxOne {
+            right: 280px;
+
+            img {
+              width: 350px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1299px) {
+  .summerSec {
+    .summerSecWrapper {
+      .summerInnerBoxOne {
+        .summerImgBox {
+          .imgBoxOne {
+            top: 115px;
+
+            img {
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .summerSec {
+    padding: var(--p50) 0px;
+
+    .summerSecWrapper {
+      flex-wrap: wrap;
+
+      .summerInnerBoxOne {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .summerImgBox {
+          justify-content: center;
+          align-items: center;
+
+          .imgBoxOne {
+            right: inherit;
+            left: 140px;
+            top: 100px;
+
+            img {
+              width: 250px;
+            }
+          }
+        }
+      }
+
+      .summerInnerBoxTwo {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .summerSec {
+    margin: var(--m0);
+
+    .summerSecWrapper {
+      .summerInnerBoxOne {
+        .summerImgBox {
+          .imgBoxOne {
+            left: 80px;
+            top: 150px;
+
+            img {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .summerSec .summerSecWrapper .titleBox h4 {
+    margin-bottom: 10px;
+  }
+
+  .summerSec .summerSecWrapper .summerInnerBoxTwo .titleBox p {
+    margin-bottom: var(--m20);
+  }
+}
+
+@media (max-width: 600px) {
+  .summerSec {
+    .summerSecWrapper {
+      .summerInnerBoxOne {
+        .summerImgBox {
+          width: 100%;
+
+          .imgBoxOne {
+            left: 50px;
+
+            img {
+              width: 150px;
+            }
+          }
+
+          .imgBoxTwo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            img {
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .summerSec {
+    .summerSecWrapper {
+      .summerInnerBoxTwo {
+        .titleBox {
+          h4 {
+            font-size: var(--fs24);
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

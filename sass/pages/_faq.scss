@@ -1,0 +1,149 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Faq Section css
+  02. Responsive css
+
+**********************************************/
+
+.fashionFaqSection {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .fashionFaqInner {
+        width: var(--width100);
+        position: relative;
+
+        .fashionTabPaneContent {
+            background-color: var(--white);
+
+            .fashionfaqBody {
+                .commonHeadingOne {
+                    margin-bottom: var(--m20);
+
+                    .commonHeading {
+                        h5 {
+                            color: var(--text-black);
+                        }
+                    }
+                }
+
+                .fashionFaqContent {
+                    .fashionFaqAccordiontGroup {
+                        .accordion {
+                            .accordion-item {
+                                border: none;
+                                margin-bottom: 30px;
+
+                                .accordion-header {
+                                    .accordion-button {
+                                        box-shadow: none;
+                                        border-bottom: 1px solid var(--dark01);
+                                        font-family: 'lato';
+                                        font-weight: var(--fw400);
+                                        font-size: var(--fs20);
+                                        color: var(--text-black);
+                                        padding: 0px 0px 15px 0px;
+                                        border-radius: 0;
+
+
+                                        &:not(.collapsed) {
+                                            background-color: transparent;
+                                            color: var(--chocolate);
+                                            box-shadow: none;
+                                            border-bottom: 1px solid var(--dark01);
+                                        }
+                                    }
+                                }
+
+                                .accordion-collapse {
+                                    border-bottom: 1px solid var(--dark01);
+
+                                    .accordion-body {
+                                        font-family: 'lato';
+                                        font-weight: var(--fw400);
+                                        font-size: var(--fs16);
+                                        color: var(--dark01);
+                                        padding: 15px 0px 15px 0px;
+                                        border-radius: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .HaveQuestionsBox {
+                background-color: var(--sand);
+                padding: var(--p20);
+                position: sticky;
+                top: 20px;
+
+                .commonHeading {
+                    h5 {
+                        color: var(--text-black);
+                        text-align: center;
+                        margin-bottom: var(--m20);
+                    }
+                }
+
+                p {
+                    max-width: 292px;
+                    font-family: "lato";
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    color: var(--dark01);
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                .phone {
+                    margin: var(--m20) var(--m0) var(--m30) var(--m0);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        font-family: "lato";
+                        font-weight: var(--fw400);
+                        font-size: var(--fs20);
+                        color: var(--dark01);
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 12px;
+                    }
+                }
+
+                .fashionStillHaveQuestBtn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+
+
+// responsive css start 
+
+@media(max-width:767px) {
+    .fashionFaqSection .fashionFaqInner .fashionTabPaneContent .fashionfaqBody .fashionFaqContent .fashionFaqAccordiontGroup .accordion .accordion-item .accordion-header .accordion-button {
+        font-size: var(--fs18);
+    }
+
+    .fashionFaqSection {
+        padding: var(--p50) var(--p0);
+    }
+
+    .fashionFaqSection .fashionFaqInner .fashionTabPaneContent .fashionfaqBody .commonHeadingOne .commonHeading h5 {
+        font-size: var(--fs22);
+    }
+}

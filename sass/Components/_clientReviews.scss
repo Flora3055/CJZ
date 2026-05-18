@@ -1,0 +1,261 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Client Reviews Section css
+  02. Responsive css
+
+**********************************************/
+
+.clientReviews {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: 100px 0px 100px 0px;
+
+  .clientWrapper {
+    width: var(--width100);
+    position: relative;
+
+    .titleBox {
+      .testi {
+        position: absolute;
+        font-family: "Kalnia";
+        font-weight: 400;
+        font-size: 90px;
+        top: -25px;
+        left: 10px;
+        color: white;
+        text-shadow: -1px -1px 0 var(--chocolate), 1px -1px 0 var(--chocolate),
+          -1px 1px 0 var(--chocolate), 1px 1px 0 var(--chocolate);
+        z-index: -1;
+        opacity: 10%;
+      }
+    }
+  }
+  .clientReviewsSliderBox {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+
+    .clientReviewsCardBox {
+      width: 100%;
+      position: relative;
+      display: flex;
+
+      .clientImgBox {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -50px;
+        z-index: 999;
+      }
+
+      .titleBox {
+        width: 520px;
+        background-color: var(--dark02);
+        padding: 30px 20px 30px 70px;
+
+        .commonHeading {
+          h6 {
+            margin-bottom: 30px;
+            margin-top: 10px;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          color: var(--text-black);
+          background-image: url("../images/clientRiewimg.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .rating-box {
+          width: 100%;
+          position: relative;
+          margin-top: 30px;
+
+          .stars {
+            width: 115px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            background-color: var(--chocolate);
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+
+    .owl-nav {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: end;
+      gap: 30px;
+      /* margin-top: 40px; */
+      top: -150px;
+      right: 0px;
+
+      .owl-prev {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid var(--chocolate);
+        transition: all 0.5s;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+        &:hover {
+          background-color: var(--chocolate);
+          svg {
+            path {
+              fill: var(--white);
+            }
+          }
+        }
+      }
+      .owl-next {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid var(--chocolate);
+        transition: all 0.5s;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          background-color: var(--chocolate);
+          svg {
+            path {
+              fill: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// responsive css start 
+
+@media (max-width: 1199px) {
+  .clientReviews {
+    .clientReviewsSliderBox {
+      .clientReviewsCardBox {
+        .clientTextBox {
+          h5 {
+            margin-bottom: 15px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .clientReviews {
+    .clientWrapper {
+      .titleBox {
+        .testi {
+          font-size: 70px;
+          top: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .clientReviews {
+     padding: 50px 0px 100px 0px;
+    .clientReviewsSliderBox {
+      .clientReviewsCardBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .owl-nav {
+        top: inherit;
+        right: 0px;
+        bottom: -60px;
+        justify-content: center;
+      }
+    }
+  }
+  .clientReviews .clientReviewsSliderBox .owl-nav .owl-prev {
+    width: 35px;
+    height: 35px;
+}
+  .clientReviews .clientReviewsSliderBox .owl-nav .owl-next {
+    width: 35px;
+    height: 35px;
+}
+}
+
+@media (max-width: 767px) {
+  .clientReviews {
+    .clientWrapper {
+      .titleBox {
+        .testi {
+          font-size: 50px;
+          top: -5px;
+        }
+      }
+    }
+  }
+  .clientReviews {
+	.clientReviewsSliderBox {
+		margin-top: 50px;
+	}
+}
+
+}
+
+@media (max-width: 600px) {
+  .clientReviews {
+    .clientReviewsSliderBox {
+      .clientReviewsCardBox {
+        flex-wrap: wrap;
+        .clientImgBox {
+          margin-right: 0;
+          width: 100%;
+          max-width: 278px;
+        }
+        .titleBox {
+          width: 100%;
+          padding: 20px 20px 20px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .clientReviews {
+    .clientWrapper {
+      .titleBox {
+        .testi {
+          font-size: 32px;
+          top: 0px;
+        }
+      }
+    }
+  }
+}

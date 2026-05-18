@@ -1,0 +1,134 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Best Style Section css
+  02. Responsive css
+
+**********************************************/
+
+.bestStyleSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    background-color: var(--sand);
+
+    .bestStyleWrapper {
+        width: var(--width100);
+        display: flex;
+        gap: 23px;
+
+
+        .bestStyleInnerBoxOne {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .tilteTwo {
+                width: var(--width100);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .textBox {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+
+
+                    p {
+                        font-family: 'lato';
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: #949494;
+                        margin: 30px 0px 60px 0px;
+                        text-align: start;
+
+                    }
+                }
+            }
+        }
+
+        .bestStyleInnerBoxTwo {
+            width: 65%;
+
+            .bestStyleImgBox {
+                width: 100%;
+                display: flex;
+                gap: 30px;
+
+                .img1 {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// responsive css start  
+
+@media(max-width:1299px) {
+    .bestStyleSec {
+        .bestStyleWrapper {
+            .bestStyleInnerBoxOne {
+                width: 50%;
+
+                .tilteTwo {
+                    .textBox {
+                        h2 {
+                            font-size: var(--fs36);
+                        }
+
+                        p {
+                            margin: 20px 0px 20px 0px;
+                        }
+                    }
+                }
+            }
+
+            .bestStyleInnerBoxTwo {
+                width: 50%;
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:991px) {
+    .bestStyleSec {
+        .bestStyleWrapper {
+            flex-wrap: wrap;
+
+            .bestStyleInnerBoxOne {
+                width: 100%;
+
+                .tilteTwo {
+                    .textBox {
+                        h2 {
+                            font-size: var(--fs26);
+                        }
+                    }
+                }
+            }
+
+            .bestStyleInnerBoxTwo {
+                width: 100%;
+            }
+        }
+    }
+
+    .bestStyleSec {
+        padding: var(--p50) var(--p0);
+    }
+}

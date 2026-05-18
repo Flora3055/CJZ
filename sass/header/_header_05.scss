@@ -1,0 +1,308 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Header_05 Section css
+  02. Responsive css
+
+**********************************************/
+
+.sticky-header_05 {
+    position: sticky;
+    top: 0;
+    background-color: var(--chocolate);
+    z-index: 1000;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+
+
+    .headerMainBox {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 15px;
+        gap: 20px;
+
+        .logo {
+            position: relative;
+
+            img {
+                width: var(--width100);
+            }
+        }
+
+        nav {
+            .nav-list {
+                display: flex;
+                gap: 30px;
+
+                li {
+                    position: relative;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        color: var(--dark02);
+                        transition: all 0.5s;
+
+                        svg {
+                            path {
+                                fill: var(--dark02) !important;
+                            }
+                        }
+
+                        &:hover {
+                            color: var(--white);
+
+                            svg {
+                                path {
+                                    fill: var(--white) !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .dropdown-menu {
+                        left: 0;
+                        top: 35px;
+                        z-index: 100;
+                        margin: 0px;
+                        padding: 0px;
+                        height: auto;
+                        min-width: 200px;
+                        display: block;
+                        border: none;
+                        border-radius: 4px;
+                        position: absolute;
+                        -webkit-transform: scaleY(0);
+                        transform: scaleY(0);
+                        background-color: #ffffff;
+                        background-clip: inherit;
+                        -webkit-transition: all 0.4s ease-in-out;
+                        transition: all 0.4s ease-in-out;
+                        -webkit-transform-origin: center top 0;
+                        transform-origin: center top 0;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                        li {
+                            display: block;
+                            margin: 0 !important;
+                            -webkit-transition: 0.3s all ease-in-out;
+                            transition: 0.3s all ease-in-out;
+                            border-bottom: 1px solid rgba(228, 228, 228, 0.95);
+
+                            a {
+                                width: 100%;
+                                padding: 10px 20px 10px;
+                                color: #111111;
+                                font-weight: 400;
+                                font-size: 15px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                transition: 500ms all ease;
+
+                                &:hover {
+                                    margin-left: 8px;
+                                    background-color: transparent;
+                                    color: var(--chocolate);
+                                }
+                            }
+
+                            .sub-dropdown {
+                                position: absolute;
+                                left: 200px;
+                                padding: 0px 0px;
+                                top: 0;
+                                width: 170px;
+                                border-radius: 8px;
+                                background-color: #ffffff;
+                                display: none;
+
+                                -webkit-box-shadow: 2px 0 10px #0000001a;
+                                box-shadow: 2px 0 10px #0000001a;
+                                -webkit-transition: 0.3s all ease-in-out;
+                                transition: 0.3s all ease-in-out;
+                                transition: all 0.5s;
+
+                                li {}
+                            }
+
+                            &:hover {
+                                .sub-dropdown {
+                                    display: block;
+                                    transition: all 0.5s;
+                                }
+                            }
+
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                        }
+
+                        &.short-code-menu {
+                            width: 880px;
+                            left: -237%;
+                            padding: 20px;
+
+                            li {
+                                border-bottom: 0;
+
+                                .megamenu-wrapper {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    .megamenu-list {
+                                        width: 100%;
+
+                                        h5 {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            padding-bottom: 8px;
+                                            text-transform: uppercase;
+                                            color: var(--chocolate);
+                                        }
+
+                                        a {
+                                            color: #111111;
+                                            display: block;
+                                            font-weight: 400;
+                                            position: relative;
+                                            padding-left: 12px;
+                                            font-size: 16px;
+                                            padding-bottom: 8px;
+                                            border-bottom: 1px solid rgba(228, 228, 228, 0.95);
+
+                                            &:before {
+                                                content: '';
+                                                position: absolute;
+                                                width: 7px;
+                                                height: 7px;
+                                                border-radius: 50%;
+                                                background-color: #111111;
+                                                left: 0;
+                                                top: 18px;
+                                            }
+
+                                            &:hover {
+                                                margin-left: 8px;
+                                                color: var(--chocolate);
+
+                                                &:before {
+                                                    background-color: var(--chocolate);
+                                                }
+                                            }
+
+                                            &:last-child {
+                                                a {
+                                                    border-bottom: 0;
+                                                }
+                                            }
+                                        }
+
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .dropdown-menu {
+                            -webkit-transform: scaleY(1);
+                            transform: scaleY(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .headerIcons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .searchBarBox {
+                border: 1px solid var(--chocolate);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                input {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    padding: var(--p10);
+                    font-family: 'Lato';
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    background-color: transparent;
+                    color: var(--black);
+
+                }
+
+                a {
+                    padding-right: var(--p10);
+                }
+            }
+
+            .headerIconsBox {
+                position: relative;
+
+                ul {
+                    display: flex;
+                    gap: 20px;
+
+                    li {
+                        .menu-btn {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+
+        i {
+            cursor: pointer;
+            color: #555;
+        }
+    }
+}
+
+.header-05 {
+    background-color: var(--chocolate);
+}
+
+@media(max-width:991px) {
+    .sticky-header_05 .headerMainBox nav .nav-list {
+        display: none;
+    }
+
+    .sticky-header_05 .headerMainBox .headerIcons .headerIconsBox ul li .menu-btn {
+        display: block;
+    }
+}
+
+@media(max-width:500px) {
+    .sticky-header_05 .headerMainBox .headerIcons .headerIconsBox ul {
+        display: flex;
+        gap: 10px;
+    }
+}

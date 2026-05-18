@@ -1,0 +1,67 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Pagination Section css
+  02. Responsive css
+
+**********************************************/
+
+.pagination {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+
+
+    ul {
+        display: flex;
+
+        li {
+            a {
+                border: 1px solid var(--dark01);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                color: var(--dark01);
+                font-family: 'lato';
+                font-weight: var(--fw500);
+                font-size: var(--fs30);
+                transition: all 0.5s;
+
+                &:hover {
+                    background-color: var(--chocolate);
+                    color: var(--white);
+
+                    svg {
+                        path {
+                            stroke: var(--white);
+                        }
+                    }
+                }
+
+                &.active {
+                    background-color: var(--chocolate);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .pagination {
+        padding-bottom: 30px;
+    }
+}

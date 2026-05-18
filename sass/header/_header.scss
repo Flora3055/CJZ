@@ -1,0 +1,231 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Header Section css
+  02. Responsive css
+
+**********************************************/
+
+header {
+  .top_header {
+    width: var(--width100);
+    position: relative;
+    background-color: var(--chocolate);
+
+    .topbar_text_slider {
+      width: var(--width100);
+      position: relative;
+      background-color: var(--chocolate);
+
+      .bx-wrapper {
+        width: var(--width100);
+        background-color: var(--chocolate);
+        border: none;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+        margin-bottom: 0;
+
+        .bx-viewport {
+          width: var(--width100);
+
+          li {
+            text-align: center;
+            color: var(--white);
+          }
+        }
+      }
+
+      .item {
+        p {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0px;
+          font-weight: 700;
+          font-size: var(--fs16);
+          color: var(--white);
+        }
+      }
+
+      .owl-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .owl-prev {
+          position: absolute;
+          left: 780px;
+          top: 23px;
+
+          span {
+            font-size: var(--fs30);
+            line-height: 0px;
+            color: var(--white);
+          }
+        }
+
+        .owl-next {
+          position: absolute;
+          right: 780px;
+          top: 23px;
+
+          span {
+            font-size: var(--fs30);
+            line-height: 0px;
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+
+  .bottom_header {
+    width: var(--width100);
+    position: relative;
+    background-color: var(--white);
+
+    .main-menu {
+      width: var(--width100);
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0px;
+      z-index: 9;
+
+      #main-nav {
+        position: relative;
+      }
+
+      .sub_header {
+        display: flex;
+        gap: 20px;
+        position: relative;
+
+        .menu_items {
+          position: relative;
+
+          ul {
+            display: flex;
+            gap: 20px;
+
+            .search-container {
+              input {
+                outline: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border: none;
+                background-color: var(--transparent);
+                border-bottom: 2px solid var(--white);
+                color: var(--white);
+
+                &::placeholder {
+                  font-weight: 400;
+                  font-size: var(--fs16);
+                  color: var(--white);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  header {
+    .bottom_header {
+      .main-menu {
+        margin: 0;
+
+        .sub_header {
+          .menu_items {
+            position: relative;
+            background-color: var(--chocolate);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  header .bottom_header .custom_container {
+    padding: 0;
+  }
+
+  header .bottom_header .main-menu .brand-logo {
+    padding: 10px;
+  }
+}
+
+
+@media (max-width:991px) {
+  header {
+    .bottom_header {
+      .row {
+        padding: 0;
+
+        col {
+          padding: 0;
+        }
+      }
+
+      .main-menu {
+        .brand-logo {
+          padding: 8px;
+
+
+          img {
+            max-width: 150px;
+          }
+        }
+
+        .sub_header {
+          background-color: var(--chocolate);
+          align-items: center;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width:991px) {
+  header .bottom_header .main-menu .sub_header {
+    gap: 5px;
+    padding: 0px 10px;
+  }
+  header .bottom_header .main-menu .sub_header .menu_items ul {
+    gap: 5px;
+}
+}
+
+
+@media (max-width:400px) {
+  header {
+    .top_header {
+      .topbar_text_slider {
+        .bx-wrapper {
+          padding: 6px 0px;
+        }
+      }
+    }
+
+    .bottom_header {
+      .main-menu {
+        .brand-logo {
+          img {
+            max-width: 120px;
+          }
+        }
+      }
+    }
+  }
+}

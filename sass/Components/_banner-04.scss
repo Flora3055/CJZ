@@ -1,0 +1,382 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. banner Four Section css
+  02. Responsive css
+
+**********************************************/
+
+.bannerFourSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    background-color: #EFDED0;
+
+    .bannerFourWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+
+        .bannerFourSlider {
+            width: var(--width100);
+            position: relative;
+
+            .bannerFourInnerBox {
+                width: var(--width100);
+                position: relative;
+                display: flex;
+
+                .bannerFourContentBox {
+                    width: 60%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .titleBox {
+                        width: 100%;
+
+                        h4 {
+                            font-family: 'lato';
+
+                            span {
+                                color: var(--chocolate);
+                                text-decoration: underline;
+                            }
+                        }
+
+                        h1 {
+                            font-family: 'Kalnia';
+                            font-weight: var(--fw500);
+                            font-size: var(--fs80);
+                            color: var(--bg-dark);
+                            margin: var(--m20) var(--m0) var(--m60) var(--m0);
+
+                        }
+
+                        p {
+                            max-width: 772px;
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+
+                .bannerFourImgBox {
+                    width: 40%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .owl-nav {
+                width: 100%;
+
+
+
+                .owl-prev {
+                    position: absolute;
+                    left: -180px;
+                    top: 40%;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    border: 2px solid var(--dark01);
+                    transition: all 0.5s;
+
+                    svg {
+                        width: 30px;
+                        height: 36px;
+                        transition: all 0.5s;
+
+                        path {
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    &:hover {
+                        border-color: var(--chocolate);
+
+                        svg {
+                            path {
+                                stroke: var(--chocolate);
+                            }
+                        }
+                    }
+                }
+
+                .owl-next {
+                    position: absolute;
+                    top: 40%;
+                    right: -180px;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    border: 2px solid var(--dark01);
+                    transition: all 0.5s;
+
+                    svg {
+                        width: 30px;
+                        height: 36px;
+                        transition: all 0.5s;
+
+                        path {
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    &:hover {
+                        border-color: var(--chocolate);
+
+                        svg {
+                            path {
+                                stroke: var(--chocolate);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .bannerLeftBg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .bannerRightBg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+// responsive css start 
+
+// @media(max-width:1799px) {
+//     .bannerFourSec {
+//         .bannerFourWrapper {
+//             .bannerFourSlider {
+//                 .owl-nav {
+//                     .owl-next {
+//                         right: -100px;
+//                         width: 60px;
+//                         height: 60px;
+//                     }
+
+//                     .owl-prev {
+//                         left: -100px;
+//                         width: 60px;
+//                         height: 60px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+@media(max-width:1599px) {
+    .bannerFourSec {
+        .bannerFourWrapper {
+            .bannerFourSlider {
+                .bannerFourInnerBox {
+                    .bannerFourContentBox {
+                        .titleBox {
+                            h1 {
+                                font-size: var(--fs64);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav {
+        width: 100%;
+        position: absolute;
+        bottom: 40px;
+        justify-content: start;
+        align-items: start;
+        display: flex;
+        gap: 30px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-next {
+        position: relative;
+        right: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-prev {
+        position: relative;
+        left: 0;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media(max-width:1199px) {
+    .bannerFourSec {
+        .bannerFourWrapper {
+            .bannerFourSlider {
+                .bannerFourInnerBox {
+                    .bannerFourContentBox {
+                        .titleBox {
+                            h1 {
+                                font-size: var(--fs40);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .bannerFourInnerBox .bannerFourContentBox .titleBox h1 {
+        margin: var(--m20) var(--m0) var(--m40) var(--m0);
+    }
+}
+
+@media(max-width:991px) {
+    .bannerFourSec {
+        .bannerFourWrapper {
+            .bannerFourSlider {
+                .bannerFourInnerBox {
+                    .bannerFourContentBox {
+                        .titleBox {
+                            h1 {
+                                font-size: var(--fs30);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .bannerFourInnerBox .bannerFourContentBox .titleBox h1 {
+        margin: var(--m20) var(--m0) var(--m20) var(--m0);
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-prev svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-next svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav {
+        bottom: 15px;
+    }
+}
+
+
+@media(max-width:767px) {
+    .bannerFourSec {
+        .bannerFourWrapper {
+            .bannerFourSlider {
+                .bannerFourInnerBox {
+                    flex-wrap: wrap;
+                    gap: 50px;
+
+                    .bannerFourContentBox {
+                        width: 100%;
+                        margin-top: 50px;
+
+                        .titleBox {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            h1 {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .bannerFourImgBox {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .bannerFourInnerBox .bannerFourContentBox .titleBox h1 {
+        font-size: var(--fs24);
+        max-width: 400px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .bannerFourInnerBox .bannerFourContentBox .titleBox h1 {
+        margin: var(--m20) var(--m0) var(--m26) var(--m0);
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-prev svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-next svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-next {
+        top: 45%;
+    }
+
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav .owl-prev {
+        top: 45%;
+    }
+}
+
+@media(max-width:575px) {
+    .bannerFourSec .bannerFourWrapper .bannerFourSlider .owl-nav {
+        justify-content: center;
+        align-items: center;
+    }
+}

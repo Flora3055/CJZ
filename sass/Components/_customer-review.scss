@@ -1,0 +1,161 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Customer Review Section css
+  02. Responsive css
+
+**********************************************/
+
+.customerReviewSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    background-color: var(--sand);
+
+    .customerReviewWrapper {
+        width: var(--width100);
+        position: relative;
+
+        .tilteTwo {
+            width: var(--width100);
+
+            .textBox {
+                width: var(--width100);
+
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .customerReviewMainBox {
+            position: relative;
+
+            .customerReviewSlider {
+                position: relative;
+
+                .customerContentBox {
+                    position: relative;
+                    background-image: url('../images/home_03/comma-img.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .imgBox {
+                        width: var(--width100);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: var(--m16);
+
+                        img {
+                            border-radius: 50px;
+                            width: 100%;
+                            max-width: 100px;
+                        }
+                    }
+
+                    .textBox {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            max-width: 622px;
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-style: italic;
+                            font-size: var(--fs16);
+                            text-align: center;
+                            color: var(--text-black);
+                            margin-bottom: var(--m20);
+                        }
+
+                        h4 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            a {
+                                font-family: 'Kalnia';
+                                font-weight: var(--fw500);
+                                font-size: var(--fs30);
+                                color: var(--chocolate);
+                                text-align: center;
+                                display: inline-flex;
+                            }
+                        }
+
+                        h6 {
+                            font-weight: var(--fw400);
+                            font-size: var(--fs20);
+                            text-align: center;
+                            color: var(--dark01);
+                            margin-top: var(--m10);
+                        }
+                    }
+                }
+
+                .owl-dots {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: var(--m40);
+                    gap: 10px;
+
+                    .owl-dot {
+                        span {
+                            border: 1px solid #949494;
+                            width: 14px;
+                            height: 14px;
+                            display: flex;
+                            border-radius: 50px;
+
+                        }
+
+                        &.active {
+                            span {
+                                border-color: transparent;
+                                background-color: var(--chocolate);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsive css start 
+
+@media(max-width:991px) {
+    .customerReviewSec {
+        padding: var(--p30) var(--p0);
+    }
+}
+
+@media(max-width:767px) {
+    .customerReviewSec {
+        .customerReviewWrapper {
+            .customerReviewMainBox {
+                .customerReviewSlider {
+                    .customerContentBox {
+                        .textBox {
+                            p {
+                                max-width: 350px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

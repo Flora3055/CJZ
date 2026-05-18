@@ -1,0 +1,536 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Newest Fashion Section css
+  02. Our Excelence Section css 
+  03. Our Fashion Style section css
+  04. Responsive css
+
+**********************************************/
+
+.newestFashionSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .newestFashionSecWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .newestFashionInfoBoxOne {
+            width: var(--width100);
+            display: flex;
+            gap: 30px;
+
+            .newestFashionInnerBoxOne {
+                width: var(--width45);
+
+                .fashonImgBox {
+                    width: var(--width100);
+                    height: 100%;
+
+                    img {
+                        width: var(--width100);
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .newestFashionInnerBoxTwo {
+                width: var(--width55);
+
+                .fasionContentBox {
+                    .titleBox {
+                        position: relative;
+                    }
+
+                    .para {
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: var(--dark01);
+                        margin: var(--m16) var(--m0) var(--m40) var(--m0);
+                    }
+
+                    .fasionListBox {
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 17px;
+
+                            li {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+
+                                a {
+                                    font-family: 'Kalnia';
+                                    font-weight: var(--fw500);
+                                    font-size: var(--fs30);
+                                    color: var(--chocolate);
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 13px;
+
+                                }
+
+                                p {
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs16);
+                                    color: var(--dark01);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .newestFashionInfoBoxTwo {
+            width: var(--width100);
+            display: flex;
+            gap: 30px;
+
+            .newestFashionInnerBoxOne {
+                width: var(--width55);
+
+                .fasionContentBox {
+                    .para {
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: var(--dark01);
+                        margin: var(--m16) var(--m0) var(--m40) var(--m0);
+                    }
+
+                    .fasionListBox {
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 17px;
+
+                            li {
+                                a {
+                                    font-family: 'Kalnia';
+                                    font-weight: var(--fw500);
+                                    font-size: var(--fs26);
+                                    color: var(--chocolate);
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 13px;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .newestFashionInnerBoxTwo {
+                width: var(--width45);
+
+                .fashonImgBox {
+                    width: var(--width100);
+                    height: 100%;
+
+                    img {
+                        width: var(--width100);
+                        height: 100%;
+                            object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.ourExcelenceSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    background-color: var(--sand);
+
+    .ourExcelenceSecWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+
+        .ourExcelenceHeadingBox {
+            width: var(--width100);
+
+            .titleBox {
+                h4 {
+                    position: relative;
+                    font-family: 'Lato';
+                    margin-bottom: 10px;
+
+                    &::after {
+                        content: "";
+                        width: 26px;
+                        height: 2px;
+                        background-color: var(--text-black);
+                        position: absolute;
+                        left: 212px;
+                        bottom: 12px;
+
+                    }
+                }
+            }
+        }
+
+        .ourExcelenceMainBox {
+            width: var(--width100);
+            display: flex;
+            gap: 30px;
+            margin-top: 60px;
+
+            .ourExclenceCardBox {
+                width: 33%;
+                box-shadow: 0px 4px 20px 0px #0000001A;
+                background-color: var(--white);
+                border-radius: var(--br6);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: var(--p30);
+
+                .iconBox {
+                    margin-bottom: 25px;
+
+                    a {
+                        width: 70px;
+                        height: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #EFDED0;
+                        border-radius: 50%;
+                    }
+                }
+
+                p {
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    text-align: center;
+                    color: var(--dark01);
+                    margin-top: var(--m10);
+                }
+            }
+        }
+    }
+}
+
+.ourFashionStyleSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    background-color: var(--white);
+
+    .ourFashionStyleSecWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+
+        .ourFashionStyleHeadingBox {
+            width: var(--width100);
+
+            .titleBox {
+                h4 {
+                    position: relative;
+                    font-family: 'Lato';
+                    margin-bottom: 10px;
+
+                    &::after {
+                        content: "";
+                        width: 26px;
+                        height: 2px;
+                        background-color: var(--text-black);
+                        position: absolute;
+                        left: 240px;
+                        bottom: 12px;
+
+                    }
+                }
+            }
+        }
+
+        .ourFashionStyleMainBox {
+            width: var(--width100);
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+
+            .ourFashionStyleInnerBox {
+                width: 33%;
+
+                .ourFashionStyleContentBox {
+                    p {
+                        font-family: 'lato';
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: var(--dark01);
+                        text-align: start;
+
+                    }
+
+                    h6 {
+                        a {
+                            font-family: 'Kalnia';
+                            font-weight: var(--fw500);
+                            font-size: var(--fs16);
+                            color: var(--chocolate);
+                        }
+                    }
+
+                    .leftText {
+                        margin: 25px 0px 15px 0px;
+                    }
+
+                    .rightText {
+                        margin: 15px 0px;
+                    }
+                }
+
+                .ourFashionStyleImgBox {
+                    width: var(--width100);
+
+                    img {
+                        width: var(--width100);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+// responsive css start 
+
+@media(max-width:1399px) {
+    .newestFashionSec {
+        .newestFashionSecWrapper {
+            .newestFashionInfoBoxOne {
+                .newestFashionInnerBoxTwo {
+                    .fasionContentBox {
+                        .titleBox {
+                            h2 {
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .newestFashionInfoBoxTwo {
+                .newestFashionInnerBoxOne {
+                    .fasionContentBox {
+                        .titleBox {
+                            h2 {
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:1199px) {
+    .newestFashionSec {
+        .newestFashionSecWrapper {
+            .newestFashionInfoBoxOne {
+                .newestFashionInnerBoxTwo {
+                    .fasionContentBox {
+                        .para {
+                            margin: var(--m16) var(--m0) var(--m20) var(--m0);
+                        }
+
+                        .fasionListBox {
+                            ul {
+                                li {
+                                    a {
+                                        font-size: var(--fs26);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .newestFashionInfoBoxTwo {
+                .newestFashionInnerBoxOne {
+                    .fasionContentBox {
+                        .para {
+                            margin: var(--m16) var(--m0) var(--m20) var(--m0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ourExcelenceSec {
+        .ourExcelenceSecWrapper {
+            .ourExcelenceMainBox {
+                .ourExclenceCardBox {
+                    .titleBox {
+                        h4 {
+                            font-size: var(--fs22);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:991px) {
+    .newestFashionSec {
+        .newestFashionSecWrapper {
+            .newestFashionInfoBoxOne {
+                flex-wrap: wrap;
+
+                .newestFashionInnerBoxOne {
+                    width: var(--width100);
+                }
+
+                .newestFashionInnerBoxTwo {
+                    width: var(--width100);
+                }
+            }
+
+            .newestFashionInfoBoxTwo {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+
+                .newestFashionInnerBoxOne {
+                    width: var(--width100);
+                }
+
+                .newestFashionInnerBoxTwo {
+                    width: var(--width100);
+                }
+            }
+        }
+    }
+
+
+    .ourExcelenceSec {
+        .ourExcelenceSecWrapper {
+            .ourExcelenceMainBox {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .ourExclenceCardBox {
+                    width: 48%;
+                }
+            }
+        }
+    }
+
+    .ourFashionStyleSec {
+        .ourFashionStyleSecWrapper {
+            .ourFashionStyleMainBox {
+                flex-wrap: wrap;
+
+                .ourFashionStyleInnerBox {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:774px) {
+    .ourExcelenceSec {
+        .ourExcelenceSecWrapper {
+            .ourExcelenceMainBox {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .ourExclenceCardBox {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:767px) {
+    .newestFashionSec {
+        padding: var(--p50) var(--p0);
+
+        .newestFashionSecWrapper {
+            .newestFashionInfoBoxOne {
+                .newestFashionInnerBoxTwo {
+                    .fasionContentBox {
+                        .titleBox {
+                            h2 {
+                                font-size: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .newestFashionInfoBoxTwo {
+                .newestFashionInnerBoxOne {
+                    .fasionContentBox {
+                        .titleBox {
+                            h2 {
+                                font-size: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ourExcelenceSec {
+        padding: var(--p50) var(--p0);
+    }
+
+
+    .ourFashionStyleSec {
+        padding: var(--p50) var(--p0);
+    }
+}
+
+@media(max-width:500px) {
+    .newestFashionSec .newestFashionSecWrapper .newestFashionInfoBoxOne .newestFashionInnerBoxTwo .fasionContentBox .titleBox h2 {
+        font-size: 18px;
+    }
+
+    .newestFashionSec .newestFashionSecWrapper .newestFashionInfoBoxOne .newestFashionInnerBoxTwo .fasionContentBox .fasionListBox ul li a {
+        font-size: var(--fs16);
+    }
+
+    .newestFashionSec .newestFashionSecWrapper .newestFashionInfoBoxTwo .newestFashionInnerBoxOne .fasionContentBox .titleBox h2 {
+        font-size: 20px;
+    }
+
+    .newestFashionSec .newestFashionSecWrapper .newestFashionInfoBoxTwo .newestFashionInnerBoxOne .fasionContentBox .fasionListBox ul li a {
+        font-size: var(--fs20);
+    }
+}

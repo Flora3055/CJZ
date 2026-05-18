@@ -1,0 +1,275 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. About Blog Sidebar Css
+  02. Responsive css
+
+**********************************************/
+
+.aboutBlogSideBarSection {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .aboutBlogSideBarInner {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+
+        .our_blog_02_column_with_sidebar_card_box {
+            .row {
+                row-gap: 30px;
+            }
+        }
+    }
+}
+
+.aboutBlogSideBarBox {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p20);
+
+    .aboutBlogSideBar {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .aboutSideBarList {
+            position: relative;
+
+            .commonHeading {
+                h5 {
+                    color: var(--text-black);
+                    margin-bottom: 15px;
+                }
+            }
+
+            .search-bar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid var(--dark01);
+
+
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    color: var(--dark01);
+
+                    &::placeholder {
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: var(--dark01);
+                    }
+                }
+            }
+
+            .checkbox-list {
+                position: relative;
+
+                form {
+                    .form-group {
+                        display: block;
+                        margin-bottom: 15px;
+
+                        input {
+                            padding: 0;
+                            height: initial;
+                            width: initial;
+                            margin-bottom: 0;
+                            display: none;
+                            cursor: pointer;
+
+                            &:checked+label:after {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                top: 8px;
+                                left: 8px;
+                                width: 5px;
+                                height: 10px;
+                                border: solid var(--chocolate);
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                            }
+                        }
+
+                        label {
+                            position: relative;
+                            cursor: pointer;
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+
+                            &::before {
+                                content: '';
+                                -webkit-appearance: none;
+                                background-color: transparent;
+                                border: 2px solid var(--dark01);
+                                padding: 8px;
+                                display: inline-block;
+                                position: relative;
+                                vertical-align: middle;
+                                cursor: pointer;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+
+                li {
+                    font-family: 'lato';
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    color: var(--dark01);
+
+                    input {
+                        padding: 0;
+                        height: initial;
+                        width: initial;
+                        margin-bottom: 0;
+                        display: none;
+                        cursor: pointer;
+                        position: relative;
+                    }
+
+                    input:checked+label:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 2px;
+                        left: 9px;
+                        width: 6px;
+                        height: 14px;
+                        border: solid #0079bf;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            .aboutParaBox {
+                p {
+                    font-family: 'lato';
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    color: var(--dark01);
+                }
+            }
+
+            .aboutBlogGroup {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .CardaboutSideBarList {
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+
+                    .aboutBlogCardSidebarImg {
+                        a {
+                            img {
+                                width: 45px;
+                                height: 45px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .aboutBlogCardSidebarContent {
+                        span {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                        }
+
+                        h4 {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+
+                            a {
+                                color: var(--text-black);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .newsletterWraper {
+                .newsletterContentBox {
+                    h4 {
+                        font-family: 'lato';
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: var(--text-black);
+                        margin-bottom: var(--m16);
+                    }
+                }
+
+                .newsletterInputBox {
+                    input {
+                        width: 100%;
+                        border: 1px solid var(--dark01);
+                        outline: none;
+                        background-color: transparent;
+                        font-weight: var(--fw400);
+                        font-size: var(--fs16);
+                        color: var(--dark01);
+                        padding: var(--p8) var(--p10);
+                    }
+                }
+
+                .btn_box{
+                    margin-top: 20px;
+                }
+            }
+
+
+            .ProductTags {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    li {
+                        a {
+                            font-weight: var(--fw500);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                            background-color: var(--white);
+                            box-shadow: 0px 4px 10px 0px #00000014;
+                            text-transform: capitalize;
+                            padding: 3px 10px;
+                            border-radius: 6px;
+                            transition: all 0.5s;
+
+                            &:hover {
+                                background-color: var(--chocolate);
+                                color: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .borderbottom {
+            border-bottom: 1px solid var(--dark01);
+            padding-bottom: 20px;
+        }
+    }
+}

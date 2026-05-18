@@ -1,0 +1,174 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. foooter-04 Section css
+  02. Responsive css
+
+**********************************************/
+
+.footerFour {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  background-color: #333333;
+  padding: var(--p50) var(--p0) var(--p100) var(--p0);
+
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .logo {
+      position: relative;
+    }
+
+    .footer-nav {
+      position: relative;
+
+      ul {
+        display: flex;
+        gap: 50px;
+
+        li {
+          a {
+            font-family: 'lato';
+            font-weight: var(--fw400);
+            font-size: var(--fs16);
+            color: var(--white);
+            transition: all 0.5s;
+
+            &:hover {
+              color: var(--chocolate);
+            }
+
+          }
+        }
+      }
+    }
+
+    .social-icons {
+      position: relative;
+
+      ul {
+        display: flex;
+        gap: 20px;
+
+        li {
+          a {
+            transition: all 0.5s;
+
+            svg {
+              transition: all 0.5s;
+
+              path {
+                transition: all 0.5s;
+              }
+            }
+
+            &:hover {
+              svg {
+                path {
+                  fill: var(--chocolate);
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: var(--white);
+    width: 100%;
+    margin: 50px 0px;
+  }
+
+  .footer-subscribe {
+
+    .subscribe-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+
+      #subscribeForm {
+        width: var(--width100);
+
+        .input-group {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+           input {
+           max-width: 450px;
+        }
+        }
+       .error-message{
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .footer-copy {
+      font-family: 'lato';
+      font-weight: var(--fw400);
+      font-size: var(--fs16);
+      color: var(--white);
+      text-align: center;
+      margin-top: 50px;
+
+      span {
+        color: white;
+        font-weight: var(--fw700);
+      }
+    }
+
+    #message {
+      color: var(--white);
+    }
+  }
+}
+
+// resonsive css start 
+
+@media(max-width:1199px) {
+  .footerFour {
+    .footer-top {
+      .footer-nav {
+        ul {
+          display: flex;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:991px) {
+  .footerFour .footer-top {
+    flex-direction: column;
+  }
+}
+
+@media(max-width:500px) {
+  .footerFour {
+    .footer-top {
+      .footer-nav {
+        ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

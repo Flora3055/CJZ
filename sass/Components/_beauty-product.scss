@@ -1,0 +1,153 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Beauty Product Section css
+  02. Responsive css
+
+**********************************************/
+
+.beautyProductSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .beautySecWrapper {
+        width: var(--width100);
+        height: 100%;
+        position: relative;
+        display: flex;
+        gap: 70px;
+
+        .beautyProductInnerOne {
+            width: 65%;
+
+            .beautyProductImgInfo {
+                width: var(--width100);
+                height: 100%;
+                position: relative;
+                display: flex;
+                gap: 30px;
+
+                .beautyProductImgOne {
+                    width: 60%;
+
+
+                    .imgBox {
+                        width: 100%;
+                        height: 100%;
+
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .beautyProductImgTwo {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    .imgBox {
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .beautyProductInnerTwo {
+            width: 35%;
+
+
+            .beautyProductContentBox {
+                position: relative;
+
+                .titleBox {
+                    position: relative;
+
+                    h2 {
+                        max-width: 434px;
+
+                        span {
+                            color: var(--text-black);
+                        }
+                    }
+                }
+
+                p {
+                    font-family: 'lato';
+                    font-weight: var(--fw400);
+                    font-size: var(--fs16);
+                    color: var(--dark01);
+                    padding: var(--p30) var(--p0) var(--p60) var(--p0);
+                }
+            }
+        }
+    }
+}
+
+// responsive css start 
+
+@media(max-width:1299px) {
+    .beautyProductSec {
+        .beautySecWrapper {
+            gap: 30px;
+
+            .beautyProductInnerOne {
+                width: 60%;
+            }
+
+            .beautyProductInnerTwo {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .beautyProductSec {
+        padding: var(--p50) var(--p0);
+    }
+
+    .beautyProductSec .beautySecWrapper .beautyProductInnerTwo .beautyProductContentBox p {
+        padding: var(--p10) var(--p0) var(--p30) var(--p0);
+    }
+}
+
+@media(max-width:767px) {
+    .beautyProductSec {
+        .beautySecWrapper {
+            gap: 30px;
+            flex-direction: column;
+
+            .beautyProductInnerOne {
+                width: 100%;
+            }
+
+            .beautyProductInnerTwo {
+                width: 100%;
+
+                .beautyProductContentBox {
+                    .titleBox {
+                        h2 {
+                            max-width: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

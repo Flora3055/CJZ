@@ -1,0 +1,202 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Shop Category Section css
+  02. Responsive css
+
+**********************************************/
+
+.shopCategorySec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .shopCategorySecWrapper {
+        .titleBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .shopCategoryMainBox {
+        width: var(--width100);
+        position: relative;
+        margin-top: var(--m30);
+
+        .shopCategorySlider {
+            position: relative;
+
+            .item {
+                .shopImgCardBox {
+                    position: relative;
+
+                    .imgBox {
+                        width: 100%;
+                        position: relative;
+
+                        .titleBox {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            background-color: rgb(239 222 208 / 81%);
+                            padding: var(--p14) var(--p0);
+                            transition: all 0.5s;
+
+                            h2 {
+                                margin: 0;
+                                text-align: center;
+                                transition: all 0.5s;
+
+                                a {
+                                    transition: all 0.5s;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .titleBox {
+                                background-color: var(--chocolate);
+
+                                h2 {
+                                    a {
+                                        color: var(--white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// responsive css start 
+
+@media(max-width:1699px) {
+    .shopByCategorySec {
+        .shopByCategoryMainBox {
+            .shopByCategoryInfoBox {
+                .shopByCategoryMainWrap {
+                    .shopByCategoryInnerBox {
+                        .shopByCategoryTextBox {
+                            h2 {
+                                font-size: var(--fs64) !important;
+                            }
+                        }
+                    }
+
+                    .shopByCategorySliderBox {
+                        .product-card {
+                            .details {
+                                .titleBox {
+                                    h4 {
+                                        font-size: var(--fs24) !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .shopCategorySec .shopCategoryMainBox .shopCategorySlider .item .shopImgCardBox .imgBox .titleBox h2 {
+        font-size: var(--fs26);
+    }
+}
+
+@media(max-width:1199px) {
+    .shopByCategorySec {
+        .shopByCategoryMainBox {
+            .shopByCategoryInfoBox {
+                .shopByCategoryMainWrap {
+                    .shopByCategoryInnerBox {
+                        padding: 30px 30px !important;
+
+                        .shopByCategoryTextBox {
+                            h2 {
+                                font-size: var(--fs48) !important;
+                            }
+                        }
+
+                        .shopByCategoryCountBox {
+                            .container2 ul {
+                                gap: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1199px) {
+    .shopByCategorySec {
+        .shopByCategoryMainBox {
+            .shopByCategoryInfoBox {
+                .shopByCategoryMainWrap {
+                    .shopByCategoryInnerBox {
+                        flex-direction: column;
+                        gap: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .shopCategorySec {
+        padding: var(--p30) var(--p0) var(--p0) var(--p0);
+    }
+
+    .shopByCategorySec {
+        padding: 50px 0px 100px 0px !important;
+    }
+}
+
+@media(max-width:500px) {
+    .container2 ul li {
+        font-size: var(--fs18) !important;
+    }
+
+    .shopByCategorySec {
+        .shopByCategoryMainBox {
+            .shopByCategoryInfoBox {
+                .shopByCategoryList {
+                    ul {
+                        li {
+                            .shopListBox {
+                                .textBox {
+                                    a {
+                                        font-size: var(--fs24) !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .shopByCategoryMainWrap {
+                    .shopByCategoryInnerBox {
+                        .shopByCategoryTextBox {
+                            h2 {
+                                font-size: var(--fs40) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

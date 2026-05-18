@@ -1,0 +1,847 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Shop Single Section css
+  02. Responsive css
+
+**********************************************/
+
+.fashionShopDetail {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .fashionShopDetailInner {
+        width: var(--width100);
+
+        .fashionShopDetailRow {
+            .row {
+                row-gap: 50px;
+            }
+
+            .fashionShopProductImages {
+                position: relative;
+
+                .swiperNav {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                }
+
+                .main-image-wrapper {
+                    width: 100%;
+                    overflow: hidden; // ensures zoom stays inside
+                    border-radius: 6px; // optional
+                }
+
+                .main-image {
+                    width: 100%;
+                    transition: transform 0.4s ease;
+                    cursor: crosshair;
+
+                    &:hover {
+                        transform: scale(1.3); // zoom level
+                    }
+                }
+
+                .thumbnails {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 15px;
+
+                    img {
+                        width: 33.3%;
+                        cursor: pointer;
+                        border: 2px solid transparent;
+                        transition: border 0.3s;
+
+                        &:hover {
+                            border: 2px solid var(--chocolate);
+                        }
+                    }
+                }
+            }
+
+            .fashionShopProductDetail {
+                .fashionShopProductDetailInner {
+                    .fashionShopProductHeadingDetail {
+                        .commonHeading {
+                            margin-bottom: var(--m16);
+
+                            h5 {
+                                font-size: var(--fs30);
+                            }
+                        }
+                    }
+
+                    .fashionShopProductReviewDetail {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin-bottom: var(--m12);
+
+                        .shopProductRatingDetail {
+                            a {
+                                display: flex;
+                                gap: 5px;
+                                align-items: center;
+                                font-family: 'lato';
+                                font-weight: var(--fw400);
+                                font-size: var(--fs20);
+                                color: var(--text-black);
+
+                            }
+                        }
+
+                        .shopProductReviewCountDetail {
+                            ul {
+                                display: flex;
+                                gap: 20px;
+
+                                li {
+                                    list-style: disc;
+                                    margin-left: 20px;
+                                    font-family: 'lato';
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs16);
+                                    color: var(--dark01);
+                                }
+                            }
+                        }
+                    }
+
+                    .fashionShopProductPriceDetail {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        border-bottom: 1px solid var(--dark01);
+                        padding-bottom: var(--p16);
+
+                        .shopProductPriceBox {
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
+
+                            .shopProductDiscountPrice {
+                                position: relative;
+
+                                ins {
+                                    text-decoration: none;
+                                    font-family: 'lato';
+                                    font-weight: var(--fw500);
+                                    font-size: var(--fs30);
+                                    color: var(--text-black);
+                                }
+
+                                &::after {
+                                    content: "";
+                                    width: 5px;
+                                    height: 2px;
+                                    position: absolute;
+                                    background-color: var(--text-black);
+                                    top: 50%;
+                                    left: 80px;
+                                }
+                            }
+
+                            .shopProductMarketPrice {
+                                del {
+                                    font-family: 'lato';
+                                    font-weight: var(--fw500);
+                                    font-size: var(--fs30);
+                                    color: var(--dark01);
+                                }
+                            }
+                        }
+
+                        .shopProductPriceList {
+                            ul {
+                                li {
+                                    list-style: disc;
+                                    margin-left: 20px;
+                                    font-family: 'lato';
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs16);
+                                    color: var(--dark01);
+                                }
+                            }
+                        }
+                    }
+
+                    .fashionShopProductCouponCode {
+                        margin: var(--m14) var(--m0);
+
+                        p {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs20);
+                            color: var(--text-black);
+
+                            span {
+                                color: var(--dark01);
+                            }
+
+                        }
+                    }
+
+                    .fashionShopProductAvailableColours {
+                        margin-bottom: 15px;
+
+                        h6 {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs20);
+                            color: var(--text-black);
+                            margin-bottom: 10px;
+
+                            span {
+                                color: var(--dark01);
+                            }
+                        }
+
+                        .colorSelection {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            input[type="radio"] {
+                                display: none;
+
+                                &:checked+span {
+                                    outline: 1px dashed var(--chocolate);
+                                    outline-offset: 1px;
+                                }
+                            }
+
+                            span {
+                                display: inline-block;
+                                width: 22px;
+                                height: 22px;
+                                // outline: 1px solid #858585;
+                                outline-offset: 2px;
+                                cursor: pointer;
+                                transition: border 0.2s;
+                            }
+
+                            &:nth-child(1) {
+                                span {
+                                    background-color: #97C4EF;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                span {
+                                    background-color: #FFD23D;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                span {
+                                    background-color: #B9C070;
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                span {
+                                    background-color: #E6AFC7;
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                span {
+                                    background-color: #90CBC9;
+                                }
+                            }
+
+                            &:nth-child(6) {
+                                span {
+                                    background-color: #BCCBF4;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .fashionShopProductAvailableSize {
+                        h6 {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs20);
+                            color: var(--text-black);
+                            margin-bottom: 10px;
+
+                            span {
+                                color: var(--dark01);
+                            }
+                        }
+
+                        .sizeSelection {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+
+                            input {
+                                display: none;
+                            }
+
+                            .sizeOption {
+                                span {
+                                    border: 1px solid var(--dark01);
+                                    display: inline-block;
+                                    width: 40px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-family: 'lato';
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs20);
+                                    color: var(--dark01);
+                                    cursor: pointer;
+                                }
+
+                                input[type=radio]:checked+span {
+                                    background-color: var(--chocolate);
+                                    color: var(--white);
+                                }
+                            }
+                        }
+                    }
+
+                    .fashionShopProductAdressDetail {
+                        margin-top: var(--m20);
+                        border-bottom: 1px solid var(--dark01);
+                        padding-bottom: var(--p16);
+
+                        p {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs20);
+                            color: var(--dark01);
+
+                            .tag {
+                                display: inline-flex;
+                                font-family: 'lato';
+                                font-weight: var(--fw400);
+                                font-size: var(--fs16);
+                                color: var(--white);
+                                background-color: var(--dark01);
+                                padding: 4px 11px;
+                            }
+                        }
+
+                        small {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                        }
+                    }
+
+                    .fashionShopProductParaBox {
+                        p {
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                            margin-top: var(--m20);
+
+                        }
+                    }
+
+                    .fashionShopProductCountBox {
+                        margin: 20px 0px 30px 0px;
+
+                        .shope_single_form {
+                            button {
+                                border: 1px solid var(--dark01);
+                            }
+                        }
+                    }
+
+                    .fashionShopProductCountBox2 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 30px;
+
+                        .shope_single_form button {
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        .shope_single_form .number {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+
+                    .fashionShopProductBuyBtn {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        margin-bottom: var(--m20);
+                    }
+
+                    .fashionShopProductAvailabelPickupDetail {
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+
+                            li {
+                                font-family: 'lato';
+                                font-weight: var(--fw400);
+                                font-size: var(--fs20);
+                                color: var(--dark01);
+
+                                a {
+                                    color: var(--chocolate);
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            .bgColor {
+                                background-color: var(--sand);
+                                padding: var(--p10) var(--p20);
+                                color: var(--text-black);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fashionShopDetail2 {
+    padding: var(--p0) var(--p0) var(--p100) var(--p0);
+}
+
+.shopAddToCartBtn {
+    .btnOne {
+        width: var(--width100);
+        padding: 0px 38px;
+        white-space: nowrap;
+    }
+}
+
+.shopBuyNowBtn {
+    .transparentBtn {
+        width: var(--width100);
+        padding: 0px 38px;
+        white-space: nowrap;
+    }
+}
+
+// Fashion Tab Description css start 
+.fashionTabDescription {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding-bottom: var(--p30);
+
+    .fashionTabDescriptionInner {
+        width: var(--width100);
+        position: relative;
+
+        .fashionDescriptionTab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid var(--dark01);
+            margin-bottom: var(--m30);
+
+
+            .nav-pills {
+                display: flex;
+                gap: 100px;
+
+                .nav-item {
+                    .nav-link {
+                        background-color: transparent;
+                        font-family: "Kalnia";
+                        font-weight: var(--fw500);
+                        font-size: var(--fs26);
+                        color: var(--dark01);
+                        border-radius: 0;
+                        transition: all 0.5s;
+                        padding-bottom: var(--p16);
+
+                        &.active {
+                            border-bottom: 1px solid var(--chocolate);
+                            color: var(--chocolate);
+                        }
+                    }
+                }
+            }
+        }
+
+        .fashionDescriptionContent {
+            .tab-content {
+                .tab-pane {
+                    .fashionTabContent {
+                        .descriptionStyleBox {
+                            display: flex;
+                            gap: 40px;
+                            border-bottom: 1px solid var(--dark01);
+                            padding-bottom: var(--p60);
+
+                            .descriptionContentBox {
+                                width: var(--width60);
+
+                                .commonHeading {
+                                    margin-bottom: var(--m20);
+
+                                    h5 {
+                                        font-size: var(--fs30);
+                                    }
+                                }
+
+                                p {
+                                    font-family: "lato";
+                                    font-weight: var(--fw400);
+                                    font-size: var(--fs16);
+                                    color: var(--dark01);
+                                    margin-bottom: var(--m30);
+                                }
+
+                                .descriptionListBox {
+                                    padding-left: 20px;
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    gap: 8px 20px;
+
+                                    li {
+                                        font-family: "lato";
+                                        font-weight: var(--fw400);
+                                        font-size: var(--fs16);
+                                        color: var(--dark01);
+                                        list-style: disc;
+                                    }
+                                }
+                            }
+
+                            .descriptionImageBox {
+                                width: var(--width40);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        .reviewsSection {
+                            width: var(--width100);
+
+                            .reviewsHeader {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 55px;
+
+                                .sortBox {
+                                    label {
+                                        font-family: 'lato';
+                                        font-weight: var(--fw400);
+                                        font-size: var(--fs20);
+                                        color: var(--dark01);
+                                    }
+
+                                    select {
+                                        padding: 5px 10px;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        font-family: 'lato';
+                                        font-weight: var(--fw400);
+                                        font-size: var(--fs20);
+                                        color: var(--dark01);
+                                        background-color: var(--white);
+
+
+                                        option {
+                                            &:hover {
+                                                background-color: var(--chocolate);
+                                                color: var(--white);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            .reviewInfoBox {
+                                width: var(--width100);
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+
+                                .reviewItemBox {
+                                    width: var(--width100);
+
+                                    .reviewUserBox {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        gap: 20px;
+                                        margin-bottom: var(--m16);
+
+                                        .reviewContentBox {
+                                            display: flex;
+                                            align-items: center;
+
+                                            img {
+                                                width: 100px;
+                                                height: 100px;
+                                                border-radius: 50%;
+                                                margin-right: 15px;
+                                                object-fit: cover;
+                                            }
+
+                                            .verified {
+                                                font-family: 'lato';
+                                                font-weight: var(--fw400);
+                                                font-size: var(--fs20);
+                                                color: var(--dark01);
+                                            }
+
+                                        }
+
+                                        .reviewMonthBox {
+                                            .date {
+                                                font-family: 'lato';
+                                                font-weight: var(--fw400);
+                                                font-size: var(--fs20);
+                                                color: var(--dark01);
+                                            }
+                                        }
+                                    }
+
+                                    .reviewTextBox {
+
+                                        h4 {
+                                            font-family: 'lato';
+                                            font-weight: var(--fw400);
+                                            font-size: var(--fs16);
+                                            color: var(--text-black);
+                                            margin-bottom: var(--m10);
+                                        }
+
+                                        p {
+                                            font-family: 'lato';
+                                            font-weight: var(--fw400);
+                                            font-size: var(--fs16);
+                                            color: var(--dark01);
+                                            margin-bottom: var(--m10);
+                                        }
+                                    }
+
+                                    .reviewRatingBox {
+
+                                        a {
+                                            font-family: 'lato';
+                                            font-weight: var(--fw400);
+                                            font-size: var(--fs20);
+                                            color: var(--text-black);
+                                            display: flex;
+                                            align-items: center;
+                                        }
+
+                                    }
+                                }
+
+                                .reviewItemBox2 {
+                                    border-bottom: 1px solid var(--dark01);
+                                    padding-bottom: var(--p20);
+                                }
+                            }
+
+
+                            .review-form {
+                                margin-top: 40px;
+
+                                h4 {
+                                    font-size: 18px;
+                                    margin-bottom: 15px;
+                                }
+
+                                label {
+                                    display: block;
+                                    margin: 10px 0 5px;
+                                    font-size: 14px;
+                                    color: #333;
+                                }
+
+                                textarea,
+                                input {
+                                    width: 100%;
+                                    padding: 10px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 4px;
+                                    font-size: 14px;
+                                    margin-bottom: 15px;
+                                }
+
+                                .form-row {
+                                    display: flex;
+                                    gap: 15px;
+
+                                    input {
+                                        flex: 1;
+                                    }
+                                }
+
+                                .form-check {
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 10px 0 20px;
+
+                                    input {
+                                        width: auto;
+                                        margin-right: 10px;
+                                    }
+
+                                    label {
+                                        font-size: 13px;
+                                        color: #555;
+                                    }
+                                }
+
+                                .btn-submit {
+                                    background: #5b3a1f;
+                                    color: #fff;
+                                    padding: 10px 25px;
+                                    border: none;
+                                    border-radius: 4px;
+                                    cursor: pointer;
+                                    font-size: 14px;
+
+                                    &:hover {
+                                        background: #402816;
+                                    }
+                                }
+                            }
+                        }
+
+                        /* Responsive */
+                        @media (max-width: 768px) {
+                            .reviews-section {
+                                padding: 0 15px;
+
+                                .form-row {
+                                    flex-direction: column;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+// responsive css start 
+
+@media(max-width:1399px) {
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox {
+        gap: 20px;
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox .descriptionContentBox {
+        width: var(--width50);
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox .descriptionImageBox {
+        width: var(--width50);
+    }
+}
+
+
+@media(max-width:991px) {
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox .descriptionContentBox {
+        width: var(--width100);
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox .descriptionImageBox {
+        width: var(--width100);
+    }
+
+    .fashionShopDetail {
+        padding: var(--p30) var(--p0);
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox {
+        padding-bottom: var(--p30);
+    }
+    .fashionTabDescription {
+    padding-bottom: var(--p0) ;
+}
+}
+
+
+@media(max-width:767px) {
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .reviewsSection .reviewsHeader {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .reviewsSection .commonHeading h5 {
+        font-size: var(--fs20);
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .reviewsSection .reviewInfoBox .reviewItemBox .reviewUserBox {
+        flex-wrap: wrap;
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionTab .nav-pills {
+        display: flex;
+        gap: 20px;
+    }
+
+    .fashionShopDetail .fashionShopDetailInner .fashionShopDetailRow .fashionShopProductDetail .fashionShopProductDetailInner .fashionShopProductHeadingDetail .commonHeading h5 {
+    font-size: var(--fs24);
+}
+}
+
+@media(max-width:500px) {
+    
+    .fashionShopDetail .fashionShopDetailInner .fashionShopDetailRow .fashionShopProductDetail .fashionShopProductDetailInner .fashionShopProductHeadingDetail .commonHeading h5 {
+        font-size: var(--fs20 );
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox .descriptionContentBox .commonHeading h5 {
+        font-size: var(--fs20);
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .descriptionStyleBox .descriptionContentBox .descriptionListBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fashionShopDetail .fashionShopDetailInner .fashionShopDetailRow .fashionShopProductDetail .fashionShopProductDetailInner .fashionShopProductPriceDetail {
+        flex-wrap: wrap;
+    }
+
+    .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionTab .nav-pills .nav-item .nav-link {
+        font-size: var(--fs16);
+    }
+        .fashionTabDescription .fashionTabDescriptionInner .fashionDescriptionContent .tab-content .tab-pane .fashionTabContent .reviewsSection .commonHeading h5 {
+        font-size: var(--fs18);
+    }
+}

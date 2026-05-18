@@ -1,0 +1,340 @@
+//    Template Name: Athena Fashion
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+
+  01. Banner Two Section css
+  02. Responsive css
+
+**********************************************/
+
+.bannerTwoSec {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    background-color: #F8F1E9;
+
+    .bannerTwoLeftBg {
+        position: absolute;
+        top: 0;
+    }
+
+    .bannerTwoRightBg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .bannerWrapper {
+        width: var(--width100);
+        position: relative;
+
+        .bannerTwoSlider {
+            position: relative;
+
+            .bannerInnerBox {
+                display: flex;
+                position: relative;
+                gap: 100px;
+
+                .bannerImgBox {
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    // padding-left: 150px;
+
+                    img {
+                        width: var(--width100);
+                        // height: 930px;
+
+                        // padding-left: 150px;
+                    }
+                }
+
+                .bannerContentBox {
+                    width: 60%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 100px 0px 140px 0px;
+
+                    .titleBox {
+                        width: 100%;
+
+                        h4 {
+                            font-family: 'lato';
+                            color: var(--chocolate);
+                            position: relative;
+                            padding-left: 50px;
+
+                            &::after {
+                                content: "";
+                                width: 40px;
+                                height: 2px;
+                                position: absolute;
+                                background-color: var(--chocolate);
+                                left: 0;
+                                bottom: 50%;
+                            }
+                        }
+
+                        h1 {
+                            font-family: 'Kalnia';
+                            font-weight: var(--fw500);
+                            font-size: var(--fs80);
+                            color: var(--bg-dark);
+                            margin: var(--m20) var(--m0) var(--m30) var(--m0);
+
+
+                            span {
+                                color: var(--chocolate);
+                            }
+
+                            // .kalniaFont{
+                            //       font-family: 'Kalnia';
+                            // }
+                        }
+
+                        p {
+                            max-width: 772px;
+                            font-family: 'lato';
+                            font-weight: var(--fw400);
+                            font-size: var(--fs16);
+                            color: var(--dark01);
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+            }
+
+            .owl-nav {
+                width: 100%;
+
+
+
+                .owl-prev {
+                    position: absolute;
+                    left: -100px;
+                    top: 40%;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50px;
+                    border: 2px dashed var(--dark01);
+                    transition: all 0.5s;
+
+
+                    svg {
+                        width: 20px;
+                        transition: all 0.5s;
+
+                        path {
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    &:hover {
+                        border-color: var(--chocolate);
+
+                        svg {
+                            path {
+                                stroke: var(--chocolate);
+                            }
+                        }
+                    }
+                }
+
+                .owl-next {
+                    position: absolute;
+                    top: 40%;
+                    right: -100px;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50px;
+                    border: 2px dashed var(--dark01);
+                    transition: all 0.5s;
+
+                    svg {
+                        width: 20px;
+                        transition: all 0.5s;
+
+                        path {
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    &:hover {
+                        border-color: var(--chocolate);
+
+                        svg {
+                            path {
+                                stroke: var(--chocolate);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// responsive css start 
+
+@media(max-width:1599px) {
+    .bannerTwoSec {
+        .bannerWrapper {
+            .bannerTwoSlider {
+                .bannerInnerBox {
+                    gap: 50px;
+
+                    .bannerContentBox {
+                        .titleBox {
+                            h1 {
+                                font-size: 60px;
+                            }
+
+                            p {
+                                max-width: 670px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bannerTwoSec .bannerWrapper .bannerTwoSlider .owl-nav .owl-prev {
+        left: 0px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .bannerTwoSec .bannerWrapper .bannerTwoSlider .owl-nav .owl-next {
+        right: 0px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media(max-width:1399px) {
+    .bannerTwoSec {
+        .bannerWrapper {
+            .bannerTwoSlider {
+                .bannerInnerBox {
+                    .bannerImgBox {
+                        width: 50%;
+                    }
+
+                    .bannerContentBox {
+                        width: 50%;
+
+                        .titleBox {
+                            h1 {
+                                font-size: 50px;
+                            }
+
+                            p {
+                                max-width: 455px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:1299px) {
+    .bannerTwoSec {
+        .bannerWrapper {
+            .bannerTwoSlider {
+                .bannerInnerBox {
+                    .bannerImgBox {
+                        padding-left: 85px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1099px) {
+    .bannerTwoSec {
+        .bannerWrapper {
+            .bannerTwoSlider {
+                .bannerInnerBox {
+                    flex-wrap: wrap;
+                    flex-direction: column-reverse;
+
+                    .bannerImgBox {
+                        width: 100%;
+                        padding-left: 0;
+
+                        img {
+                            max-width: 500px;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .bannerContentBox {
+                        width: 100%;
+                        padding: 100px 0px 50px 0px;
+
+                        .titleBox {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            h1 {
+                                text-align: center;
+                            }
+
+                            p {
+                                max-width: 670px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:767px) {
+    .bannerTwoSec .bannerWrapper .bannerTwoSlider .bannerInnerBox .bannerContentBox {
+        padding: 50px 0px 50px 0px;
+    }
+
+    .bannerTwoSec .bannerWrapper .bannerTwoSlider .bannerInnerBox .bannerImgBox img {
+        max-width: 400px;
+    }
+}
+
+@media(max-width:550px) {
+    .bannerTwoSec {
+        .bannerWrapper {
+            .bannerTwoSlider {
+                .bannerInnerBox {
+                    .bannerContentBox {
+                        .titleBox {
+                            h1 {
+                                font-size: 32px;
+                            }
+
+                            h4 {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
